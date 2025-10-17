@@ -114,25 +114,25 @@
   --color-bg-holding-page: rgba(82, 0, 255, 0.6);
   /* Headings */
   --h1-color: #006B00;
-  --h2-color: #5200ff;
-  --h3-color: #5200ff;
-  --h4-color: #5200ff;
-  --h5-color: #5200ff;
-  --h6-color: #5200ff;
+  --h2-color: #006B00;
+  --h3-color: #006B00;
+  --h4-color: #006B00;
+  --h5-color: #006B00;
+  --h6-color: #006B00;
   /* Special Text Colours */
   --color-text-holding-title: #ebedf0;
   --color-text-project-category: #ffffff;
   --color-text-project-description: #222;
   --color-text-project-sidebar: #222;
-  --color-text-project-title: #5200ff;
+  --color-text-project-title: #006B00;
   --color-text-work-grid-title: #78B502;
   /* Link States */
   --color-link: #5200ff;
   --color-link-hover: #111;
   --color-link-visited: #5200ff;
   /* Navigation */
-  --color-nav-link: #5200ff;
-  --color-nav-link-hover: #321575;
+  --color-nav-link: #78B502;
+  --color-nav-link-hover: #FF7A9C;
   --color-nav-arrow: #5200ff;
   --color-nav-arrow-hover: #000;
   --color-nav-arrow-stroke: #5200ff;
