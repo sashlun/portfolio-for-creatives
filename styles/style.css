@@ -32,8 +32,8 @@
 /* TODO: Replace these Google Fonts with the ones you want to use on your site. */
 /* Remember, the more fonts you load, the longer it can take for your page to load. */
 
-@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet");
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"rel="stylesheet");
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap");
 
 /*
 
@@ -97,49 +97,49 @@
 :root {
   /* Typography */
   --font-family-body: "Figtree", sans-serif;
-  --font-family-heading: "Figtree", sans-serif;
+  --font-family-heading: "Syne", sans-serif;
   --font-family-project-title: "Figtree", sans-serif;
   /* Core Colours */
-  --color-text-primary: #222;
-  --color-text-secondary: #333;
+  --color-text-primary: #006b00;
+  --color-text-secondary: #006b00;
   --color-accent-primary: #5200ff;
   --color-accent-secondary: #ff057c;
   --color-overlay-primary: rgba(82, 0, 255, 0.5);
   --color-highlight: lemonchiffon;
   --color-fallback: #ff057c; /* Fallback color for glitch effect on 404 page */
   /* Backgrounds */
-  --color-bg: #FCFFFA;
-  --color-bg-about: #FCFFFA;
-  --color-bg-footer: #FCFFFA;
+  --color-bg: #fcfffa;
+  --color-bg-about: #fcfffa;
+  --color-bg-footer: #fcfffa;
   --color-bg-holding-page: rgba(82, 0, 255, 0.6);
   /* Headings */
-  --h1-color: #006B00;
-  --h2-color: #006B00;
-  --h3-color: #006B00;
-  --h4-color: #006B00;
-  --h5-color: #006B00;
-  --h6-color: #006B00;
+  --h1-color: #fcfffa;
+  --h2-color: #006b00;
+  --h3-color: #006b00;
+  --h4-color: #006b00;
+  --h5-color: #006b00;
+  --h6-color: #006b00;
   /* Special Text Colours */
   --color-text-holding-title: #ebedf0;
   --color-text-project-category: #ffffff;
-  --color-text-project-description: #222;
-  --color-text-project-sidebar: #222;
-  --color-text-project-title: #006B00;
-  --color-text-work-grid-title: #78B502;
+  --color-text-project-description: #ff7a9c;
+  --color-text-project-sidebar: #ff7a9c;
+  --color-text-project-title: #006b00;
+  --color-text-work-grid-title: #006b00;
   /* Link States */
-  --color-link: #5200ff;
-  --color-link-hover: #111;
-  --color-link-visited: #5200ff;
+  --color-link: #ff7a9c;
+  --color-link-hover: #ff7a9c;
+  --color-link-visited: #ff7a9c;
   /* Navigation */
-  --color-nav-link: #78B502;
-  --color-nav-link-hover: #FF7A9C;
-  --color-nav-arrow: #5200ff;
-  --color-nav-arrow-hover: #000;
-  --color-nav-arrow-stroke: #5200ff;
-  --color-nav-arrow-stroke-hover: #000;
+  --color-nav-link: #78b502;
+  --color-nav-link-hover: #ff7a9c;
+  --color-nav-arrow: #78b502;
+  --color-nav-arrow-hover: #ff7a9c;
+  --color-nav-arrow-stroke: #78b502;
+  --color-nav-arrow-stroke-hover: #ff7a9c;
   /* Components */
-  --color-bg-full-width: #FCFFFA;
-  --color-bg-project-description: #FCFFFA;
+  --color-bg-full-width: #fcfffa;
+  --color-bg-project-description: #fcfffa;
   --color-bg-sidebar-project: transparent;
   --color-bg-sidebar-work: lemonchiffon;
   --color-gradient-hero: linear-gradient(90deg, #ff00ff, #00ffff);
@@ -152,7 +152,7 @@
   /* Special Elements */
   --color-icon-heart: darkred;
   --color-text-holding-footer: #f8f8ff;
-  --color-bg-selection: #5200ff;
+  --color-bg-selection: #78b502;
   --color-shadow-stroke: rgba(0, 0, 0, 0.4);
   /* Assets */
   --image-noise-texture: url(/assets/temp/noise.svg);
@@ -202,7 +202,7 @@
 html {
   box-sizing: border-box; /* Makes sure padding and borders don't add extra width to elements */
   scroll-behavior: smooth; /* Adds smooth scrolling between sections */
-  cursor: url("../assets/temp/up-cursor.png"), auto !important; /* Custom cursor (change the URL below to use your own) */
+  cursor: url("../assets/MOUSE/circle-mouse.svg"), auto !important; /* Custom cursor (change the URL below to use your own) */
 
   /* TODO: Replace the URL above to add a custom cursor. 
      If you want to use the default browser cursor, just delete this line. */
@@ -445,7 +445,7 @@ svg {
 h1 {
   font-size: 2.2rem;
   font-family: var(--font-family-heading);
-  line-height: 1.2;
+  line-height: 1;
   margin-bottom: 1rem;
   color: var(--h1-color);
 }
@@ -459,7 +459,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.325rem;
+  font-size: 1.625rem;
   margin-bottom: 1rem;
   line-height: 1.2;
   color: var(--h3-color);
@@ -538,6 +538,7 @@ sup {
   line-height: 1.2;
   color: var(--color-text-project-description);
   margin-bottom: 1rem;
+  text-transform: uppercase;
 }
 
 /* 🧱 Full-width headings — useful in layouts that span edge-to-edge */
@@ -562,10 +563,8 @@ sup {
 
 /* 📂 Project grid title — used in grid view (like a portfolio gallery) */
 .work-grid-project-title {
-  font-size: 2.875rem;
+  font-size: 2rem;
   color: var(--color-text-work-grid-title);
-  text-transform: uppercase;
-  font-weight: bold;
 }
 
 /* 🏷️ Project category label — displays the type or role of the project */
@@ -623,6 +622,7 @@ a:active {
 
 a.nav-link-primary {
   color: var(--color-nav-link);
+  text-transform: uppercase;
 }
 a.nav-link-primary:hover {
   color: var(--color-nav-link-hover);
@@ -718,6 +718,8 @@ a.nav-link-primary:hover {
   justify-content: center;
   padding: var(--padding-small);
   text-align: center; /* Keeps text centered */
+  background-image: url("../assets/CARDS/leaves.JPG");
+  background-size: cover;
 }
 
 .hero-icon {
@@ -759,8 +761,8 @@ a.nav-link-primary:hover {
   min-height: 80vh; /* Takes up most of the screen height */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: space-between;
   background: var(
     --color-bg-full-width
   ); /* Background color for full-width sections */
@@ -772,10 +774,10 @@ a.nav-link-primary:hover {
   min-height: 60vh; /* Ensures the headline takes up a good portion of the screen */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: var(--padding-small);
-  text-align: center; /* Keeps the text centered */
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: var(--padding-tiny);
+  text-align: left; /* Keeps the text centered */
 }
 
 .section-container {
@@ -860,8 +862,8 @@ a.nav-link-primary:hover {
 
 /* Project container for background and padding */
 .project-container {
-  background: transparent); /* Set project background color */
-  padding: var(--padding-medium);
+  background: transparent; /* Set project background color */
+  padding: var(--padding-tiny);
 }
 
 /* Overlay (appears on hover) */
@@ -983,7 +985,7 @@ a.nav-link-primary:hover {
   grid-gap: 3rem; /* Consistent spacing between sections */
   min-height: auto; /* Allows footer to expand based on content, no fixed height */
   background: var(--color-bg-footer); /* Using CSS variable for theming */
-  padding: var(--padding-small); /* Internal spacing */
+  padding: var(--padding-medium); /* Internal spacing */
 
   /* Note: Using 'fr' units ensures proper scaling across devices */
 }
@@ -1151,7 +1153,7 @@ a.nav-link-primary:hover {
   justify-content: flex-start;
   flex-direction: column;
   background: var(--color-bg-project-description);
-  padding: var(--padding-small);
+  padding: var(--padding-tiny);
   width: 100%;
   margin-bottom: 1rem; /* Space below the description */
 }
@@ -1299,18 +1301,19 @@ a.nav-link-primary:hover {
 
 .error-headline-wrapper {
   width: 85%;
+  height: 30rem;
   display: flex;
   flex-direction: column;
   flex: 1;
   align-items: center;
   justify-content: center;
-  padding: var(--padding-small);
+  padding: var(--padding-ultra);
   text-align: center;
   margin: 0 auto;
 }
 
 .error-page-animation {
-  width: 25rem;
+  height: 15rem;
 }
 
 /*
@@ -1396,7 +1399,7 @@ to keep your styles reusable and consistent.
   }
 
   h1 {
-    font-size: 4.275rem;
+    font-size: 3.2rem;
   }
 
   h2 {
@@ -1404,12 +1407,12 @@ to keep your styles reusable and consistent.
   }
 
   h3 {
-    font-size: 1.625rem;
+    font-size: 1rem;
   }
 
   .h1-full-width,
   .h2-full-width {
-    width: 70%;
+    width: 90%;
     padding: var(--padding-small);
   }
 
@@ -1448,7 +1451,7 @@ to keep your styles reusable and consistent.
   }
 
   .nav-branding-logo {
-    width: 5rem;
+    width: 3rem;
     /* TODO: Adjust the width of the logo on large devices here. */
   }
 
@@ -1579,7 +1582,7 @@ to keep your styles reusable and consistent.
     padding-top: var(--padding-jumbo);
     padding-right: var(--padding-jumbo);
     padding-bottom: 0;
-    padding-left: var(--padding-jumbo);
+    padding-left: var(--padding-large);
     grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
   }
 
