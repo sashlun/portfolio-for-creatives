@@ -230,7 +230,8 @@
               >Behance</a
             >
           </li>
-
+        </ul>
+      </li>
       <li class="footer-full-width">
         <p><a href="#top">Smooth scroll to the top</a></p>
         <p class="footer-fineprint">
@@ -238,29 +239,7 @@
           <span class="heart">❤</span>
           by Sasha Mei Lun.
         </p>
-        <script>
-          document.getElementById("copyright-years").textContent +=
-            new Date().getFullYear();
-        </script>
       </li>
     </ul>
-    <div id="myID" class="bottomMenu hide">
-      <a href="project-3.html">Next Project</a>
-    </div>
-
-    <script>
-      myID = document.getElementById("myID");
-
-      var myScrollFunc = function () {
-        var y = window.scrollY;
-        if (y >= 800) {
-          myID.className = "bottomMenu show";
-        } else {
-          myID.className = "bottomMenu hide";
-        }
-      };
-
-      window.addEventListener("scroll", myScrollFunc);
-    </script>
   </body>
 </html>

@@ -1301,7 +1301,7 @@ a.nav-link-primary:hover {
 
 .error-headline-wrapper {
   width: 85%;
-  height: 30rem;
+  height: rem;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -1314,6 +1314,7 @@ a.nav-link-primary:hover {
 
 .error-page-animation {
   height: 15rem;
+  width: 15rem;
 }
 
 /*
