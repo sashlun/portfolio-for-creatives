@@ -32,8 +32,8 @@
 /* TODO: Replace these Google Fonts with the ones you want to use on your site. */
 /* Remember, the more fonts you load, the longer it can take for your page to load. */
 
-@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"rel="stylesheet");
-@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"rel="stylesheet");
+@import url("https://fonts.googleapis.com/css2?family=Lilex:ital,wght@0,100..700;1,100..700&display=swap"rel="stylesheet");
 
 /*
 
@@ -96,50 +96,50 @@
 
 :root {
   /* Typography */
-  --font-family-body: "Figtree", sans-serif;
-  --font-family-heading: "Syne", sans-serif;
-  --font-family-project-title: "Figtree", sans-serif;
+  --font-family-body: "Outfit", sans-serif;
+  --font-family-heading: "Outfit", sans-serif;
+  --font-family-project-title: "Outfit", sans-serif;
   /* Core Colours */
-  --color-text-primary: #006b00;
-  --color-text-secondary: #006b00;
-  --color-accent-primary: #5200ff;
+  --color-text-primary: #28282a;
+  --color-text-secondary: #28282a;
+  --color-accent-primary: #transparent;
   --color-accent-secondary: #ff057c;
-  --color-overlay-primary: rgba(82, 0, 255, 0.5);
+  --color-overlay-primary: rgba(245, 245, 243, 0.25);
   --color-highlight: lemonchiffon;
   --color-fallback: #ff057c; /* Fallback color for glitch effect on 404 page */
   /* Backgrounds */
-  --color-bg: #fcfffa;
-  --color-bg-about: #fcfffa;
-  --color-bg-footer: #fcfffa;
+  --color-bg: #f5f5f3;
+  --color-bg-about: #x;
+  --color-bg-footer: #f5f5f3;
   --color-bg-holding-page: rgba(82, 0, 255, 0.6);
   /* Headings */
-  --h1-color: #fcfffa;
-  --h2-color: #006b00;
-  --h3-color: #006b00;
-  --h4-color: #006b00;
-  --h5-color: #006b00;
-  --h6-color: #006b00;
+  --h1-color: #28282a;
+  --h2-color: #28282a;
+  --h3-color: #28282a;
+  --h4-color: #78b502;
+  --h5-color: #28282a;
+  --h6-color: #28282a;
   /* Special Text Colours */
-  --color-text-holding-title: #ebedf0;
-  --color-text-project-category: #ffffff;
-  --color-text-project-description: #ff7a9c;
-  --color-text-project-sidebar: #ff7a9c;
-  --color-text-project-title: #006b00;
-  --color-text-work-grid-title: #006b00;
+  --color-text-holding-title: #f5f5f3;
+  --color-text-project-category: #f5f5f3;
+  --color-text-project-description: #78b502;
+  --color-text-project-sidebar: #78b502;
+  --color-text-project-title: #28282a;
+  --color-text-work-grid-title: #28282a;
   /* Link States */
-  --color-link: #ff7a9c;
-  --color-link-hover: #ff7a9c;
-  --color-link-visited: #ff7a9c;
+  --color-link: #78b502;
+  --color-link-hover: #78b502;
+  --color-link-visited: #78b502;
   /* Navigation */
-  --color-nav-link: #78b502;
-  --color-nav-link-hover: #ff7a9c;
-  --color-nav-arrow: #78b502;
-  --color-nav-arrow-hover: #ff7a9c;
-  --color-nav-arrow-stroke: #78b502;
-  --color-nav-arrow-stroke-hover: #ff7a9c;
+  --color-nav-link: #28282a;
+  --color-nav-link-hover: #78b502;
+  --color-nav-arrow: #28282a;
+  --color-nav-arrow-hover: #78b502;
+  --color-nav-arrow-stroke: #28282a;
+  --color-nav-arrow-stroke-hover: #78b502;
   /* Components */
-  --color-bg-full-width: #fcfffa;
-  --color-bg-project-description: #fcfffa;
+  --color-bg-full-width: #f5f5f3;
+  --color-bg-project-description: #f5f5f3;
   --color-bg-sidebar-project: transparent;
   --color-bg-sidebar-work: lemonchiffon;
   --color-gradient-hero: linear-gradient(90deg, #ff00ff, #00ffff);
@@ -151,7 +151,7 @@
   );
   /* Special Elements */
   --color-icon-heart: darkred;
-  --color-text-holding-footer: #f8f8ff;
+  --color-text-holding-footer: #f5f5f3;
   --color-bg-selection: #78b502;
   --color-shadow-stroke: rgba(0, 0, 0, 0.4);
   /* Assets */
@@ -169,7 +169,7 @@
   --padding-tiny: 0.5rem; /* Micro-spacing: icon padding, toggle switches */
   --padding-small: 1rem; /* Compact spacing: mobile buttons, form tags */
   --padding-medium: 2rem; /* Standard spacing: desktop buttons, card content */
-  --padding-large: 3rem; /* Section spacing: content blocks, banner padding */
+  --padding-large: 2.75rem; /* Section spacing: content blocks, banner padding */
   --padding-jumbo: 4rem; /* Hero elements: full-width containers, page headers */
   --padding-ultra: 8rem; /* Full-bleed spacing: edge-to-edge layouts, super-sized headers */
   /* Flex Gap Scale */
@@ -308,12 +308,12 @@ svg {
 
 /* Smooth transition when applying transformations – improves hover experience */
 .rotate {
-  transition: transform 0.3s ease;
+  transition: transform;
 }
 
 /* Rotates the element slightly on hover – adds a playful effect */
 .rotate:hover {
-  transform: rotate(4deg);
+  transform: rotate();
 }
 
 /* ----------------------------- */
@@ -539,13 +539,14 @@ sup {
   color: var(--color-text-project-description);
   margin-bottom: 1rem;
   text-transform: uppercase;
+  text-align: right;
 }
 
 /* 🧱 Full-width headings — useful in layouts that span edge-to-edge */
 .h1-full-width,
 .h2-full-width {
   width: 100%;
-  padding: var(--padding-small);
+  padding-top: 1rem;
   text-align: left;
 }
 
@@ -628,6 +629,14 @@ a.nav-link-primary:hover {
   color: var(--color-nav-link-hover);
 }
 
+a.nav-link-projects {
+  color: var(--color-bg-project-description);
+  text-transform: uppercase;
+}
+a.nav-link-projects:hover {
+  color: var(--color-nav-link);
+}
+
 /* -------------------------------------------------------------------------- */
 /* 🧭 Previous & Next Project Navigation Arrows                               */
 /* These styles are for the left and right arrows used to move between       */
@@ -684,15 +693,25 @@ a.nav-link-primary:hover {
   flex-direction: column;
 }
 .hero-header {
-  min-height: 6rem; /* Space reserved for logo + nav */
+  min-height: 1.5rem; /* Space reserved for logo + nav */
 }
 
 .nav-branding {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: var(--padding-small);
+  padding: var(--padding-medium);
   align-items: center;
+}
+
+.nav-branding-projects {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: var(--padding-medium);
+  align-items: center;
+  position: absolute;
+  width: 100%;
 }
 
 .nav-branding-group {
@@ -713,12 +732,14 @@ a.nav-link-primary:hover {
   display: flex;
   flex-direction: column;
   flex: 1;
-  gap: 3rem;
+  gap: 0rem;
   align-items: center;
   justify-content: center;
-  padding: var(--padding-small);
+  padding-right: var(--padding-large);
+  padding-left: var(--padding-large);
+
   text-align: center; /* Keeps text centered */
-  background-image: url("../assets/CARDS/leaves.JPG");
+  background-image: url();
   background-size: cover;
 }
 
@@ -866,7 +887,7 @@ a.nav-link-primary:hover {
   padding: var(--padding-tiny);
 }
 
-/* Overlay (appears on hover) */
+/* (appears on hover) */
 .overlay {
   position: absolute;
   top: 0;
@@ -948,7 +969,7 @@ a.nav-link-primary:hover {
   grid-template-columns: 1fr; /* Single column layout for mobile and smaller screens */
   grid-gap: 3rem; /* Space between grid items */
   background: var(--color-bg-about); /* Background color for the section */
-  padding: var(--padding-small); /* Padding around the grid */
+  padding: var(small-padding-); /* Padding around the grid */
   flex: 1; /* Flex-grow to take up available space */
 }
 
@@ -998,6 +1019,7 @@ a.nav-link-primary:hover {
 .footer-tagline {
   grid-column: 1 / 2; /* Full width (single column) */
   grid-row: 1 / 2;
+  padding: var(--padding-large);
 }
 .footer-highlights {
   grid-column: 1 / 2;
@@ -1149,11 +1171,11 @@ a.nav-link-primary:hover {
 /* Container for project description */
 .project-description-container {
   display: flex;
-  align-items: flex-start;
+  align-items: flex-end;
   justify-content: flex-start;
-  flex-direction: column;
+  flex-direction: row;
   background: var(--color-bg-project-description);
-  padding: var(--padding-tiny);
+  padding: var();
   width: 100%;
   margin-bottom: 1rem; /* Space below the description */
 }
@@ -1400,21 +1422,33 @@ to keep your styles reusable and consistent.
   }
 
   h1 {
-    font-size: 3.2rem;
+    font-size: 13rem;
+    font-weight: 800;
+    letter-spacing: -0.05em;
   }
 
   h2 {
-    font-size: 2.25rem;
+    font-size: 6rem;
+    font-weight: 800;
+  }
+
+  h2-green {
+    font-size: 5rem;
+    font-weight: 800;
+    color: var(--color-text-project-description);
   }
 
   h3 {
+    font-size: 2.5rem;
+  }
+
+  h4 {
     font-size: 1rem;
   }
 
   .h1-full-width,
   .h2-full-width {
-    width: 90%;
-    padding: var(--padding-small);
+    width: 100%;
   }
 
   /* ----------------------------- */
@@ -1461,10 +1495,10 @@ to keep your styles reusable and consistent.
   }
 
   .hero-headline-wrapper {
-    padding-top: var(--padding-jumbo);
-    padding-bottom: var(--padding-jumbo);
-    padding-left: var(--padding-ultra);
-    padding-right: var(--padding-ultra);
+    padding-top: var();
+    padding-bottom: var();
+    padding-left: var();
+    padding-right: var();
   }
   .error-headline-wrapper {
     padding-top: var(--padding-small);
@@ -1481,7 +1515,7 @@ to keep your styles reusable and consistent.
 
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    grid-gap: 1rem;
+    grid-gap: 0.65rem;
   }
 
   /* Grayscale filter with full-colour on hover and tap */
@@ -1500,7 +1534,10 @@ to keep your styles reusable and consistent.
   .portfolio,
   .project-wrapper,
   .work-sidebar-wrapper {
-    padding: var(--padding-small);
+    padding-right: var(--padding-large);
+    padding-left: var(--padding-large);
+    padding-top: var(--padding-tiny);
+    padding-bottom: var(--padding-tiny);
   }
 
   /* Project Page Flex Direction on Large Devices */
@@ -1513,7 +1550,7 @@ to keep your styles reusable and consistent.
   /* Project Full Width Styles */
 
   .project-wrapper-full-width {
-    padding: var(--padding-small) var(--padding-jumbo);
+    padding: var(--padding-large);
   }
 
   /* Sidebar on Large Devices */
@@ -1545,10 +1582,10 @@ to keep your styles reusable and consistent.
 
   /* Column styles for two-column and four-column layouts (desktop) */
   .col-2 {
-    width: 50%;
+    width: 80%;
   }
   .col-4 {
-    width: 25%;
+    width: 20%;
   }
 
   .project-navigation {
@@ -1562,7 +1599,7 @@ to keep your styles reusable and consistent.
   /* About Page Grid for Large Devices */
 
   .about-grid {
-    padding: var(--padding-jumbo);
+    padding: var(--padding-large);
     grid-template-columns: 2fr 3fr;
   }
 
@@ -1584,7 +1621,7 @@ to keep your styles reusable and consistent.
     padding-right: var(--padding-jumbo);
     padding-bottom: 0;
     padding-left: var(--padding-large);
-    grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
+    grid-template-columns: 1fr; /* Three equal columns */
   }
 
   /* Column 1: Tagline/Message */
