@@ -116,13 +116,13 @@
   --h1-color: #28282a;
   --h2-color: #28282a;
   --h3-color: #28282a;
-  --h4-color: #78b502;
+  --h4-color: #28282a;
   --h5-color: #28282a;
   --h6-color: #28282a;
   /* Special Text Colours */
   --color-text-holding-title: #f5f5f3;
-  --color-text-project-category: #f5f5f3;
-  --color-text-project-description: #78b502;
+  --color-text-project-category: #78b502;
+  --color-text-project-description: #28282a;
   --color-text-project-sidebar: #78b502;
   --color-text-project-title: #28282a;
   --color-text-work-grid-title: #28282a;
@@ -141,7 +141,7 @@
   --color-bg-full-width: #f5f5f3;
   --color-bg-project-description: #f5f5f3;
   --color-bg-sidebar-project: transparent;
-  --color-bg-sidebar-work: lemonchiffon;
+  --color-bg-sidebar-work: #f5f5f3;
   --color-gradient-hero: linear-gradient(90deg, #ff00ff, #00ffff);
   --color-gradient-project-details: linear-gradient(
     -225deg,
@@ -150,7 +150,7 @@
     #321575 100%
   );
   /* Special Elements */
-  --color-icon-heart: darkred;
+  --color-icon-heart: #28282a;
   --color-text-holding-footer: #f5f5f3;
   --color-bg-selection: #78b502;
   --color-shadow-stroke: rgba(0, 0, 0, 0.4);
@@ -443,24 +443,26 @@ svg {
 /* Heading Styles (h1 - h6) */
 
 h1 {
-  font-size: 2.2rem;
+  font-size: 4rem;
   font-family: var(--font-family-heading);
   line-height: 1;
   margin-bottom: 1rem;
   color: var(--h1-color);
+  font-weight: 800;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 4rem;
   font-family: var(--font-family-heading);
-  line-height: 1.2;
-  margin-bottom: 1rem;
+  line-height: 0.8;
+  font-weight: 800;
   color: var(--h2-color);
+  margin-bottom: 0.25rem;
 }
 
 h3 {
   font-size: 1.625rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   line-height: 1.2;
   color: var(--h3-color);
 }
@@ -469,14 +471,17 @@ h4 {
   font-size: 1.2rem;
   line-height: 1.2;
   margin-bottom: 1rem;
+  margin-top: 2rem;
+
   color: var(--h4-color);
 }
 
 h5 {
-  font-size: 1.1rem;
-  line-height: 1.2;
+  font-size: 3rem;
+  line-height: 1;
   margin-bottom: 1rem;
   color: var(--h5-color);
+  font-weight: 800;
 }
 
 h6 {
@@ -530,23 +535,22 @@ sup {
   font-family: var(--font-family-project-title);
   color: var(--color-text-project-title);
   margin-bottom: 1rem;
+  font-weight: 800;
 }
 
 /* Project description text — pairs with the project title */
 .project-description {
-  font-size: 1.225rem;
-  line-height: 1.2;
+  font-size: 1.25rem;
+  line-height: 1.5;
   color: var(--color-text-project-description);
   margin-bottom: 1rem;
-  text-transform: uppercase;
-  text-align: right;
 }
 
 /* 🧱 Full-width headings — useful in layouts that span edge-to-edge */
 .h1-full-width,
 .h2-full-width {
   width: 100%;
-  padding-top: 1rem;
+  padding-top: ;
   text-align: left;
 }
 
@@ -571,6 +575,7 @@ sup {
 /* 🏷️ Project category label — displays the type or role of the project */
 .work-grid-project-category {
   color: var(--color-text-project-category);
+  text-transform: uppercase;
 }
 
 /*
@@ -735,12 +740,8 @@ a.nav-link-projects:hover {
   gap: 0rem;
   align-items: center;
   justify-content: center;
-  padding-right: var(--padding-large);
-  padding-left: var(--padding-large);
-
-  text-align: center; /* Keeps text centered */
-  background-image: url();
-  background-size: cover;
+  padding-right: var(--padding-tiny);
+  padding-left: var(--padding-tiny);
 }
 
 .hero-icon {
@@ -865,7 +866,17 @@ a.nav-link-projects:hover {
     auto-fit,
     minmax(300px, 1fr)
   ); /* Creates a responsive grid */
-  grid-gap: 1rem; /* Space between grid items */
+  grid-gap: 0.5rem; /* Space between grid items */
+  /* The auto-fit and minmax() function help ensure responsiveness across screen sizes */
+}
+
+.grid-work {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Creates a responsive grid */
+  grid-gap: 0.5rem; /* Space between grid items */
   /* The auto-fit and minmax() function help ensure responsiveness across screen sizes */
 }
 
@@ -1432,18 +1443,16 @@ to keep your styles reusable and consistent.
     font-weight: 800;
   }
 
-  h2-green {
-    font-size: 5rem;
-    font-weight: 800;
-    color: var(--color-text-project-description);
-  }
-
   h3 {
     font-size: 2.5rem;
   }
 
   h4 {
-    font-size: 1rem;
+    font-size: 1.25rem;
+  }
+
+  h5 {
+    font-size: 4.5rem;
   }
 
   .h1-full-width,
@@ -1495,10 +1504,8 @@ to keep your styles reusable and consistent.
   }
 
   .hero-headline-wrapper {
-    padding-top: var();
-    padding-bottom: var();
-    padding-left: var();
-    padding-right: var();
+    padding-right: var(--padding-large);
+    padding-left: var(--padding-large);
   }
   .error-headline-wrapper {
     padding-top: var(--padding-small);
@@ -1581,11 +1588,15 @@ to keep your styles reusable and consistent.
   }
 
   /* Column styles for two-column and four-column layouts (desktop) */
-  .col-2 {
-    width: 80%;
+  .col-1 {
+    width: 70%;
   }
-  .col-4 {
-    width: 20%;
+
+  .col-2 {
+    width: 50%;
+  }
+  .col-3 {
+    width: 30%;
   }
 
   .project-navigation {
