@@ -13,98 +13,110 @@
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
 
-  <body class="about-page">
-  <body class="work-page" id="top">
-        <header class="hero-header">
+<!-- TOP NAVIGATION -->   
+
+ <body class="work-page" id="top">
+    <header class="hero-header">
       <ul class="nav-branding">
-        <!-- Logo (standalone LI) -->
         <li class="nav-branding-logo">
           <a href="index.html">
-            <img src="assets/LOGO/sasha-mei-lun-logo.svg" alt="Your portfolio logo" />
+            <img
+              src="assets/personalbranding/SashaLun_Logo.svg"
+              alt="Your portfolio logo"
+            />
           </a>
         </li>
         <li class="nav-branding-item">
           <ul class="nav-branding-group">
-            <li class="nav-branding-item">
-              <a href="work.html" class="nav-link-primary">Work</a>
+             <li class="nav-branding-item">
+              <a href="play.html" class="nav-link-primary">Play</a>
             </li>
             <li class="nav-branding-item">
               <a href="about.html" class="nav-link-primary">About</a>
             </li>
-               <li class="nav-branding-item">
-              <a href="play.html" class="nav-link-primary">Play</a>
-            </li>
           </ul>
         </li>
       </ul>
-    </header>
-      <div class="hero-headline-wrapper">
-          <h2 class="h1-full-width">
-            oh hey, it's sasha
-        </h2>
-      </div>
-    </header>
+
+<!-- MAIN SECTION -->   
 
     <ul class="about-grid ">
       <li class="about-grid-image">
         <figure class="about-image">
-          <img src="assets/CARDS/sasha-mei-lun-portrait.jpg" width="1500" height="1500" alt="Your Photo" />
+          <img src="assets/personalbranding/portrait-sasha-lun.jpg" width="1500" height="1500" alt="Your Photo" />
         </figure>
       </li>
       <li class="about-grid-text">
-        <p>I'm a graduate from CapU's IDEA School of Design 2027. 
-        <p>Excited to turn ideas into inspiring tangible visuals, I'm a go-getting graphic designer focused on all things branding. Whether it’s logo, advertisement, website or packaging with a spark of illustration, I keep it thoughtful. I create with aspiration to inspire the public to lead more optimistic, creative and kind lives. When I'm not comparing colour swatches, I continues to live a creative life, from musician, seamstress, photographer to athlete.
+        <h2>oh, hey there !</h2>
+        <p>Welcome to my tiny space on the internet. 
+My name is Sasha Mei Lun and I’m a designer focused on graphic design and branding. I love the idea that design can be so powerful it can influence change and make the world a more interesting place. I create so we can share our stories and create experiences that inspire empathy, ambition and optimism.
+When I’m not comparing colour swatches, you’ll catch me running on a field, cooking noodle soup, standing in thunderstorms, and thinking about the meaning of life...
       </li>
     </ul>
+
+<!-- SECONDARY SECTION -->
+
+   <ul class="about-details">
+      <li class="about-section">
+        <h4 class="bold">Services</h4>
+        <h4>Branding</h4>
+        <h4>Art Direction</h4>
+      </li> 
+      
+      <li class="about-section">
+        <h4 class="bold">Education</h4>
+        <h4>IDEA School of Design</h4>
+        <h4>Art Direction</h4>
+      </li>
+
+      <li class="about-section">
+        <h4 class="bold">Recognitions</h4>
+          <h4><a href="#">Your Award – Name of Student Award and Year</a></h4> 
+          <h4><a href="#">Capilano University Dean’s List 2025</a></h4>   
+      </li>
+
+<li class="about-section">
+        <h4 class="underline"><a href="#">Song on repeat</a></h4>
+          <img class="rounded-small" src="assets/personalbranding/song.jpg" width="1500" height="1500" alt="Your Photo" />
+            </li>
+
+            <li class="about-section">
+        <h4>Current collection</h4>
+        <img src="assets/personalbranding/song.jpg" width="1500" height="1500" alt="Your Photo" />
+        </ul>
 
   
-      <section>
-        <ul class="footer-socials-list padding-large">
-          <li class="footer-item">
-            <a>sashameilun@gmail.com</a>
-          </li>
-          <li class="footer-item">
-            <a>778-689-8788</a>
-          </li>
-          
-        <ul class="nav-branding-group">
+<!-- FOOTER -->   
 
-                  <li class="nav-branding-logo">
-          <a target="_blank" href="https://www.instagram.com/sashameilun/">
-            <img
-              src="assets/ICONS/instagram.svg"
-              alt="insta"
+ <footer class="footer-global">
+      <div class="footer-contact-social">
+          <a href="#">Insta</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">Behance</a>
+        <h2>sashameilun@gmail.com</h2>
+        <h2>@sashameilun</h2>
+      </div>
+
+ <div class="footer-tagline">
+        <img
+              src="assets/personalbranding/Contact.svg"
+              width="1920"
+              height="1080"
+              class=""
+              loading="lazy"
+              alt="Describe your project"
             />
-          </a>
-          <li class="nav-branding-logo">
-          <a target="_blank" href="https://www.linkedin.com/in/sasha-lun-830398388/">
-            <img
-              src="assets/ICONS/linkeden.svg"
-              alt="linkeden"
-            />
-          </a>
-        </li>
-          <li class="nav-branding-logo">
-          <a target="_blank" href="https://www.behance.net/sashameilun">
-            <img
-              src="assets/ICONS/behance.svg"
-              alt="behance"
-            />
-          </a>
-        </li>
-        </ul>
-      </li>
-      </section>
-      <section>
+</div>
+      </footer>
+
       <li class="footer-full-width">
-        <p><a href="#top">SCROLL TO TOP</a></p>
         <p class="footer-fineprint">
-          &copy; <span id="copyright-years">2020-2026</span>. Created with
+          © <span id="copyright-years">2020-</span>. Hand crafted with
           <span class="heart">❤</span>
-          by Sasha.
+          by Sasha Lun.
         </p>
+        <script>
+          document.getElementById("copyright-years").textContent += new Date().getFullYear();
+        </script>
       </li>
     </ul>
-    </section>
-  </body>
-</html>

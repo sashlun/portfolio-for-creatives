@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 244.96 277.04">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #2a2a2a;
+        font-family: Outfit-Medium, Outfit;
+        font-size: 65px;
+        font-weight: 500;
+      }
+    </style>
+  </defs>
+  <g id="DESIGN">
+    <g>
+      <text class="cls-1" transform="translate(54 199.25)"><tspan x="0" y="0">---</tspan></text>
+      <text class="cls-1" transform="translate(0 253.25)"><tspan x="0" y="0">—</tspan></text>
+      <text class="cls-1" transform="translate(135 253.25)"><tspan x="0" y="0">—</tspan></text>
+      <text class="cls-1" transform="translate(189 253.25)"><tspan x="0" y="0">—</tspan></text>
+      <text class="cls-1" transform="translate(94.5 55.25)"><tspan x="0" y="0">—</tspan></text>
+      <text class="cls-1" transform="translate(63 118.25) scale(.98 1)"><tspan x="0" y="0">/</tspan></text>
+      <text class="cls-1" transform="translate(45 172.25) scale(.98 1)"><tspan x="0" y="0">/</tspan></text>
+      <text class="cls-1" transform="translate(27 226.25) scale(.98 1)"><tspan x="0" y="0">/</tspan></text>
+      <text class="cls-1" transform="translate(144 226.25) scale(.98 1)"><tspan x="0" y="0">\\\</tspan></text>
+      <text class="cls-1" transform="translate(126 172.25) scale(.98 1)"><tspan x="0" y="0">\\\</tspan></text>
+      <text class="cls-1" transform="translate(108 118.25) scale(.98 1)"><tspan x="0" y="0">\\\</tspan></text>
+      <text class="cls-1" transform="translate(103.5 100.25) scale(.98 1)"><tspan x="0" y="0">```</tspan></text>
+      <text class="cls-1" transform="translate(85.5 91.25) scale(.98 1)"><tspan x="0" y="0">‘</tspan></text>
+    </g>
+  </g>
+</svg>

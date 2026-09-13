@@ -33,10 +33,9 @@
 /* Remember, the more fonts you load, the longer it can take for your page to load. */
 
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"rel="stylesheet");
-@import url("https://fonts.googleapis.com/css2?family=Lilex:ital,wght@0,100..700;1,100..700&display=swap"rel="stylesheet");
 
 /*
-
+ƒ
 /* 
 ██ ███    ███ ██████   ██████  ██████  ████████      ██████ ███████ ███████ 
 ██ ████  ████ ██   ██ ██    ██ ██   ██    ██        ██      ██      ██      
@@ -100,43 +99,43 @@
   --font-family-heading: "Outfit", sans-serif;
   --font-family-project-title: "Outfit", sans-serif;
   /* Core Colours */
-  --color-text-primary: #28282a;
-  --color-text-secondary: #28282a;
+  --color-text-primary: #2a2a2a;
+  --color-text-secondary: #2a2a2a;
   --color-accent-primary: #transparent;
-  --color-accent-secondary: #ff057c;
+  --color-accent-secondary: #719a00;
   --color-overlay-primary: rgba(245, 245, 243, 0.25);
   --color-highlight: lemonchiffon;
-  --color-fallback: #ff057c; /* Fallback color for glitch effect on 404 page */
+  --color-fallback: #28282a; /* Fallback color for glitch effect on 404 page */
   /* Backgrounds */
   --color-bg: #f5f5f3;
   --color-bg-about: #x;
   --color-bg-footer: #f5f5f3;
   --color-bg-holding-page: rgba(82, 0, 255, 0.6);
   /* Headings */
-  --h1-color: #28282a;
-  --h2-color: #28282a;
-  --h3-color: #28282a;
-  --h4-color: #28282a;
-  --h5-color: #28282a;
-  --h6-color: #28282a;
+  --h1-color: #2a2a2a;
+  --h2-color: #2a2a2a;
+  --h3-color: #2a2a2a;
+  --h4-color: #2a2a2a;
+  --h5-color: #2a2a2a;
+  --h6-color: #2a2a2a;
   /* Special Text Colours */
   --color-text-holding-title: #f5f5f3;
-  --color-text-project-category: #78b502;
-  --color-text-project-description: #28282a;
-  --color-text-project-sidebar: #78b502;
-  --color-text-project-title: #28282a;
-  --color-text-work-grid-title: #28282a;
+  --color-text-project-category: #2a2a2a;
+  --color-text-project-description: #2a2a2a;
+  --color-text-project-sidebar: #2a2a2a;
+  --color-text-project-title: #2a2a2a;
+  --color-text-work-grid-title: #2a2a2a;
   /* Link States */
-  --color-link: #78b502;
-  --color-link-hover: #78b502;
-  --color-link-visited: #78b502;
+  --color-link: #2a2a2a;
+  --color-link-hover: #719a00;
+  --color-link-visited: #2a2a2a;
   /* Navigation */
-  --color-nav-link: #28282a;
-  --color-nav-link-hover: #78b502;
-  --color-nav-arrow: #28282a;
-  --color-nav-arrow-hover: #78b502;
-  --color-nav-arrow-stroke: #28282a;
-  --color-nav-arrow-stroke-hover: #78b502;
+  --color-nav-link: #2a2a2a;
+  --color-nav-link-hover: #719a00;
+  --color-nav-arrow: #2a2a2a;
+  --color-nav-arrow-hover: #719a00;
+  --color-nav-arrow-stroke: #2a2a2a;
+  --color-nav-arrow-stroke-hover: #719a00;
   /* Components */
   --color-bg-full-width: #f5f5f3;
   --color-bg-project-description: #f5f5f3;
@@ -152,7 +151,7 @@
   /* Special Elements */
   --color-icon-heart: #28282a;
   --color-text-holding-footer: #f5f5f3;
-  --color-bg-selection: #78b502;
+  --color-bg-selection: #cbeb74;
   --color-shadow-stroke: rgba(0, 0, 0, 0.4);
   /* Assets */
   --image-noise-texture: url(/assets/temp/noise.svg);
@@ -202,7 +201,8 @@
 html {
   box-sizing: border-box; /* Makes sure padding and borders don't add extra width to elements */
   scroll-behavior: smooth; /* Adds smooth scrolling between sections */
-  cursor: url("../assets/MOUSE/circle-mouse.svg"), auto !important; /* Custom cursor (change the URL below to use your own) */
+  cursor:
+    url("../assets/MOUSE/circle-mouse.svg"), auto !important; /* Custom cursor (change the URL below to use your own) */
 
   /* TODO: Replace the URL above to add a custom cursor. 
      If you want to use the default browser cursor, just delete this line. */
@@ -442,6 +442,7 @@ svg {
 
 /* Heading Styles (h1 - h6) */
 
+/*Project Titles*/
 h1 {
   font-size: 4rem;
   font-family: var(--font-family-heading);
@@ -451,15 +452,17 @@ h1 {
   font-weight: 800;
 }
 
+/*Subtitles*/
 h2 {
-  font-size: 4rem;
+  font-size: 2rem;
   font-family: var(--font-family-heading);
   line-height: 0.8;
-  font-weight: 800;
+  font-weight: 500;
   color: var(--h2-color);
-  margin-bottom: 0.25rem;
+  margin-bottom: 1rem;
 }
 
+/*Descriptions*/
 h3 {
   font-size: 1.625rem;
   margin-bottom: 0.5rem;
@@ -467,12 +470,13 @@ h3 {
   color: var(--h3-color);
 }
 
+/*Mini Text*/
 h4 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.2;
   margin-bottom: 1rem;
-  margin-top: 2rem;
-
+  margin-top: 1rem;
+  text-transform: uppercase;
   color: var(--h4-color);
 }
 
@@ -498,12 +502,15 @@ h6 {
 
 p {
   font-size: 1rem;
-  line-height: 1.3;
-  margin-bottom: 1rem;
+  line-height: 1.4;
 }
 
-strong {
+.bold {
   font-weight: 700; /* Makes text bold */
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 em {
@@ -550,7 +557,7 @@ sup {
 .h1-full-width,
 .h2-full-width {
   width: 100%;
-  padding-top: ;
+  padding-top:;
   text-align: left;
 }
 
@@ -690,22 +697,31 @@ a.nav-link-projects:hover {
 /* Full-page intro area with logo, headline, icon, and footer nav            */
 /* Great place for first impression and personal branding                    */
 /* -------------------------------------------------------------------------- */
-
-.hero {
-  width: 100%;
-  min-height: 80vh; /* Takes up most of the screen height */
-  display: flex;
-  flex-direction: column;
-}
 .hero-header {
   min-height: 1.5rem; /* Space reserved for logo + nav */
+}
+
+.hero-headline {
+  width: 100%;
+}
+
+.hero-name {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column layout */
+  min-height: auto; /* Allows footer to expand based on content, no fixed height */
+  padding: var(--padding-jumbo); /* Internal spacing */
+  grid-gap: 1rem; /* Consistent spacing between sections */
+}
+
+.hero-name img {
+  height: 15rem;
 }
 
 .nav-branding {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: var(--padding-medium);
+  padding: var(--padding-large);
   align-items: center;
 }
 
@@ -732,18 +748,6 @@ a.nav-link-projects:hover {
   /* TODO: Adjust the width of the logo on mobile devices here */
 }
 
-.hero-headline-wrapper {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  gap: 0rem;
-  align-items: center;
-  justify-content: center;
-  padding-right: var(--padding-tiny);
-  padding-left: var(--padding-tiny);
-}
-
 .hero-icon {
   font-size: 4rem;
 }
@@ -753,6 +757,7 @@ a.nav-link-projects:hover {
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  padding: var(--padding-tiny);
 }
 
 .hero-footer-navigation {
@@ -917,7 +922,9 @@ a.nav-link-projects:hover {
   background-color: var(
     --color-overlay-primary
   ); /* Background color of the overlay */
-  transition: opacity var(--duration-normal), visibility var(--duration-normal);
+  transition:
+    opacity var(--duration-normal),
+    visibility var(--duration-normal);
 }
 
 /* Hover effect on work page grid items */
@@ -979,8 +986,7 @@ a.nav-link-projects:hover {
   display: grid; /* Set to grid layout */
   grid-template-columns: 1fr; /* Single column layout for mobile and smaller screens */
   grid-gap: 3rem; /* Space between grid items */
-  background: var(--color-bg-about); /* Background color for the section */
-  padding: var(small-padding-); /* Padding around the grid */
+  padding: var(--padding-medium); /* Padding around the grid */
   flex: 1; /* Flex-grow to take up available space */
 }
 
@@ -994,7 +1000,23 @@ a.nav-link-projects:hover {
 .about-grid-text {
   grid-column: 1 / 2; /* Text spans the first column */
   grid-row: 2 / 3; /* Text spans the second row */
+  gap: 1rem;
+  align-content: flex-end;
 }
+
+.about-details {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column layout */
+  grid-gap: 2rem; /* Consistent spacing between sections */
+  min-height: auto; /* Allows footer to expand based on content, no fixed height */
+  padding: var(--padding-medium); /* Internal spacing */
+}
+
+.about-section {
+  line-height: 1; /* Consistent line height for footer items to improve spacing */
+}
+
+/* Note: Using 'fr' units ensures proper scaling across devices */
 
 /* 
 
@@ -1012,34 +1034,22 @@ a.nav-link-projects:hover {
 /* -------------------------------------------------------------------------- */
 
 .footer-global {
-  display: grid;
-  grid-template-columns: 1fr; /* Single column layout */
-  grid-gap: 3rem; /* Consistent spacing between sections */
-  min-height: auto; /* Allows footer to expand based on content, no fixed height */
-  background: var(--color-bg-footer); /* Using CSS variable for theming */
-  padding: var(--padding-medium); /* Internal spacing */
-
-  /* Note: Using 'fr' units ensures proper scaling across devices */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding: var(--padding-medium);
 }
-
-/* -------------------------------------------------------------------------- */
-/* 🧩 FOOTER SECTION PLACEMENT                                                */
-/* Each component stacks vertically in mobile view                             */
-/* -------------------------------------------------------------------------- */
 
 .footer-tagline {
-  grid-column: 1 / 2; /* Full width (single column) */
-  grid-row: 1 / 2;
-  padding: var(--padding-large);
-}
-.footer-highlights {
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
 }
 .footer-contact-social {
-  grid-column: 1 / 2;
-  grid-row: 3 / 4;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
+
 /* -------------------------------------------------------------------------- */
 /* 🌊 FULL-WIDTH BOTTOM SECTION                                               */
 /* Typically used for copyright/legal information                             */
@@ -1120,10 +1130,6 @@ a.nav-link-projects:hover {
 /* 🌐 MINIMAL FOOTER (ALTERNATIVE VERSION)                                    */
 /* A simpler alternative to the CSS Grid footer - ideal for beginners          */
 /* -------------------------------------------------------------------------- */
-
-.footer-global-wrapper {
-  padding: var(--padding-small);
-}
 
 /* 
 
@@ -1372,8 +1378,16 @@ For common layout or effects, continue using the base utility classes
 to keep your styles reusable and consistent.
 */
 
-.play-page {
-  /* Add page-specific layout or container styles here */
+.play-options {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column layout */
+  min-height: auto; /* Allows footer to expand based on content, no fixed height */
+  padding: var(--padding-jumbo); /* Internal spacing */
+  grid-gap: 3rem; /* Consistent spacing between sections */
+}
+
+.play-options img {
+  height: 15rem;
 }
 
 /*
@@ -1410,7 +1424,6 @@ to keep your styles reusable and consistent.
 @media (min-width: 768px) {
   /* TODO: Adjust  layout for tablets */
 }
-
 /* Large devices (desktops, 992px and up) */
 
 /* Switch from mobile to desktop navigation */
@@ -1432,23 +1445,27 @@ to keep your styles reusable and consistent.
     font-size: 2rem;
   }
 
+  /*Project Titles*/
   h1 {
-    font-size: 13rem;
+    font-size: 2rem;
     font-weight: 800;
     letter-spacing: -0.05em;
   }
 
+  /*Subtitles*/
   h2 {
-    font-size: 6rem;
-    font-weight: 800;
+    font-size: 2rem;
+    font-weight: 500;
   }
 
+  /*Descriptions*/
   h3 {
     font-size: 2.5rem;
   }
 
+  /*Mini Text*/
   h4 {
-    font-size: 1.25rem;
+    font-size: 0.9rem;
   }
 
   h5 {
@@ -1503,10 +1520,6 @@ to keep your styles reusable and consistent.
     min-height: 100vh;
   }
 
-  .hero-headline-wrapper {
-    padding-right: var(--padding-large);
-    padding-left: var(--padding-large);
-  }
   .error-headline-wrapper {
     padding-top: var(--padding-small);
     padding-bottom: var(--padding-small);
@@ -1611,7 +1624,7 @@ to keep your styles reusable and consistent.
 
   .about-grid {
     padding: var(--padding-large);
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 2fr 2fr;
   }
 
   .about-grid-image {
@@ -1621,36 +1634,51 @@ to keep your styles reusable and consistent.
   .about-grid-text {
     grid-row: 1 / 2;
     grid-column: 2 / 3;
+    align-content: flex-end;
+  }
+
+  .about-details {
+    padding: var(--padding-large);
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .play-options {
+    padding: var(--padding-jumbo);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem; /* Consistent spacing between sections */
+  }
+
+  .hero-name {
+    padding: var(--padding-large);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.5rem; /* Consistent spacing between sections */
   }
 
   /* ------------------------------- */
   /* 🖥️ FOOTER GRID - DESKTOP LAYOUT */
   /* ------------------------------- */
-
   .footer-global {
-    padding-top: var(--padding-jumbo);
-    padding-right: var(--padding-jumbo);
-    padding-bottom: 0;
-    padding-left: var(--padding-large);
-    grid-template-columns: 1fr; /* Three equal columns */
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: var(--padding-large);
   }
 
-  /* Column 1: Tagline/Message */
-  .footer-tagline {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-  }
-
-  /* Column 2: Awards & Works */
-  .footer-highlights {
-    grid-row: 1 / 2;
-    grid-column: 2 / 3;
-  }
-
-  /* Column 3: Contact & Social */
+  /* Column 1: Contact & Social */
   .footer-contact-social {
-    grid-row: 1 / 2;
-    grid-column: 3 / 4;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-right: 50px;
+  }
+
+  /* Column 2: Tagline/Message */
+  .footer-tagline {
+    max-width: 700px;
+    min-width: 500px;
+    margin-left: 50px;
   }
 
   /* ------------------------------- */
