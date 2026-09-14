@@ -11,7 +11,7 @@
 */
 .masonry-grid {
   transition: all 0.5s ease-in-out;
-  column-gap: 6rem;
+  column-gap: 3rem;
   column-fill: initial;
 }
 
@@ -30,7 +30,7 @@
      - `backface-visibility` fixes flickering on some browsers
   */
 .masonry-item img {
-  transition: all 0.5s ease-in-out;
+  transition: all 0.25s ease-in-out;
   backface-visibility: hidden;
 }
 

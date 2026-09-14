@@ -33,7 +33,12 @@
 /* Remember, the more fonts you load, the longer it can take for your page to load. */
 
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"rel="stylesheet");
-
+@font-face {
+  font-family: "SashaType";
+  src:
+    url("../assets/personalbranding/SashaType-Regular.woff2") format("woff2"),
+    url("..assets/personalbranding/SashaType-Regular.ttf") format("truetype");
+}
 /*
 ƒ
 /* 
@@ -442,14 +447,10 @@ svg {
 
 /* Heading Styles (h1 - h6) */
 
-/*Project Titles*/
+/*Custom Hero*/
 h1 {
-  font-size: 4rem;
-  font-family: var(--font-family-heading);
-  line-height: 1;
-  margin-bottom: 1rem;
-  color: var(--h1-color);
-  font-weight: 800;
+  font-family: "SashaType";
+  font-size: 10rem;
 }
 
 /*Subtitles*/
@@ -530,10 +531,11 @@ sup {
 
 /* Main hero headline — usually sits in the intro section */
 .hero-headline {
-  color: var(--color-accent-primary); /* Uses your brand's dominant color */
-  max-width: 40ch; /* Optimal line length for readability (~40 characters) */
   text-wrap: balance; /* Prevents awkward line breaks (like elegant typography) */
   margin-inline: auto; /* Horizontally centers the text in its container */
+}
+.hero-headline-wrapper {
+  padding: var(--padding-medium);
 }
 
 /* Large project title — appears on individual project pages */
@@ -635,7 +637,7 @@ a:active {
 
 a.nav-link-primary {
   color: var(--color-nav-link);
-  text-transform: uppercase;
+  transition: color 0.2s ease-in-out;
 }
 a.nav-link-primary:hover {
   color: var(--color-nav-link-hover);
@@ -694,9 +696,14 @@ a.nav-link-projects:hover {
 
 /* -------------------------------------------------------------------------- */
 /* 🦸 Hero Section Layout                                                     */
-/* Full-page intro area with logo, headline, icon, and footer nav            */
-/* Great place for first impression and personal branding                    */
+/* Full-page intro area with logo, headline, icon, and footer nav             */
+/* Great place for first impression and personal branding                     */
 /* -------------------------------------------------------------------------- */
+
+.container {
+  padding: var(--padding-medium);
+}
+
 .hero-header {
   min-height: 1.5rem; /* Space reserved for logo + nav */
 }
@@ -705,16 +712,20 @@ a.nav-link-projects:hover {
   width: 100%;
 }
 
-.hero-name {
-  display: grid;
-  grid-template-columns: 1fr; /* Single column layout */
-  min-height: auto; /* Allows footer to expand based on content, no fixed height */
-  padding: var(--padding-jumbo); /* Internal spacing */
-  grid-gap: 1rem; /* Consistent spacing between sections */
+.hero-name-wrapper {
+  padding: var(--padding-medium);
 }
 
-.hero-name img {
-  height: 15rem;
+.hero-name-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  text-wrap: balance; /* Prevents awkward line breaks (like elegant typography) */
+  margin-inline: auto; /* Horizontally centers the text in its container */
+}
+
+.hero-name {
+  flex: 3 (1fr);
 }
 
 .nav-branding {
@@ -741,6 +752,7 @@ a.nav-link-projects:hover {
 }
 .nav-branding-item {
   padding: var(--padding-tiny);
+  text-transform: uppercase;
 }
 
 .nav-branding-logo {
@@ -847,7 +859,7 @@ a.nav-link-projects:hover {
 .project-wrapper,
 .work-sidebar-wrapper {
   padding: var(
-    --padding-tiny
+    --padding-medium
   ); /* Padding to keep content from touching edges */
 }
 
@@ -1338,24 +1350,27 @@ a.nav-link-projects:hover {
 
 /* A great 404 page is a chance to leave a memorable impression when visitors land on a page that doesn't exist. Consider customizing this page to be more engaging, humorous, or on-brand with your site. Check out error.css for the gradient and glitch effect. */
 
-.error-headline-wrapper {
-  width: 85%;
-  height: rem;
+.error-content-wrapper {
+  width: 100%;
   display: flex;
   flex-direction: column;
   flex: 1;
   align-items: center;
   justify-content: center;
-  padding: var(--padding-ultra);
+  padding: var(--padding-medium);
   text-align: center;
   margin: 0 auto;
+  gap: 3rem;
+}
+
+.error-content {
+  gap: 20px;
 }
 
 .error-page-animation {
   height: 15rem;
   width: 15rem;
 }
-
 /*
 
 ██████  ██       █████  ██    ██ 
@@ -1384,10 +1399,17 @@ to keep your styles reusable and consistent.
   min-height: auto; /* Allows footer to expand based on content, no fixed height */
   padding: var(--padding-jumbo); /* Internal spacing */
   grid-gap: 3rem; /* Consistent spacing between sections */
+  align-items: center;
+  justify-content: center;
 }
 
-.play-options img {
-  height: 15rem;
+a.play-icon path {
+  fill: var(--color-nav-link);
+  transition: fill 0.2s ease;
+}
+
+a.play-icon:hover path {
+  fill: var(--color-nav-link-hover);
 }
 
 /*
@@ -1431,6 +1453,10 @@ to keep your styles reusable and consistent.
 @media (min-width: 992px) {
   /* TODO: Add or adjust styles here for large devices. */
 
+  .container {
+    padding: var(--padding-large);
+  }
+
   .flex-row {
     flex-direction: row; /* Changes to row layout on larger screens */
   }
@@ -1445,11 +1471,10 @@ to keep your styles reusable and consistent.
     font-size: 2rem;
   }
 
-  /*Project Titles*/
+  /*Custom Hero*/
   h1 {
-    font-size: 2rem;
-    font-weight: 800;
-    letter-spacing: -0.05em;
+    font-family: "SashaType";
+    font-size: 18rem;
   }
 
   /*Subtitles*/
@@ -1521,10 +1546,8 @@ to keep your styles reusable and consistent.
   }
 
   .error-headline-wrapper {
-    padding-top: var(--padding-small);
-    padding-bottom: var(--padding-small);
-    padding-left: var(--padding-ultra);
-    padding-right: var(--padding-ultra);
+    padding: var(--padding-ultra);
+    height: 100%;
   }
 
   .error-404 {
@@ -1535,7 +1558,7 @@ to keep your styles reusable and consistent.
 
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    grid-gap: 0.65rem;
+    grid-gap: 2.5rem;
   }
 
   /* Grayscale filter with full-colour on hover and tap */
@@ -1554,10 +1577,7 @@ to keep your styles reusable and consistent.
   .portfolio,
   .project-wrapper,
   .work-sidebar-wrapper {
-    padding-right: var(--padding-large);
-    padding-left: var(--padding-large);
-    padding-top: var(--padding-tiny);
-    padding-bottom: var(--padding-tiny);
+    padding: var(--padding-large);
   }
 
   /* Project Page Flex Direction on Large Devices */
@@ -1646,12 +1666,26 @@ to keep your styles reusable and consistent.
     padding: var(--padding-jumbo);
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 3rem; /* Consistent spacing between sections */
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-name-wrapper {
+    padding: var(--padding-large);
+  }
+
+  .hero-name-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
   }
 
   .hero-name {
+    flex: 3 (1fr);
+  }
+
+  .hero-headline-wrapper {
     padding: var(--padding-large);
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 0.5rem; /* Consistent spacing between sections */
   }
 
   /* ------------------------------- */
@@ -1676,8 +1710,8 @@ to keep your styles reusable and consistent.
 
   /* Column 2: Tagline/Message */
   .footer-tagline {
-    max-width: 700px;
-    min-width: 500px;
+    max-width: 550px;
+    min-width: 450px;
     margin-left: 50px;
   }
 
