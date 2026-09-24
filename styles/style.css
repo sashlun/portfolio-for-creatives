@@ -453,32 +453,35 @@ h1 {
   font-size: 10rem;
 }
 
-/*Subtitles*/
+/*Project Titles*/
 h2 {
-  font-size: 2rem;
-  font-family: var(--font-family-heading);
-  line-height: 0.8;
+  font-size: 1rem;
+  line-height: 1.5;
   font-weight: 500;
   color: var(--h2-color);
-  margin-bottom: 1rem;
+  margin-bottom: 0.3rem;
 }
 
-/*Descriptions*/
+/*Bold*/
+.bold {
+  font-weight: 500;
+}
+
+/*Large*/
 h3 {
-  font-size: 1.625rem;
-  margin-bottom: 0.5rem;
-  line-height: 1.2;
-  color: var(--h3-color);
+  font-size: 2.5rem;
+  line-height: 1.1;
+  font-weight: 400;
+  color: var(--h2-color);
 }
 
-/*Mini Text*/
+/*Mini Details*/
 h4 {
-  font-size: 1rem;
+  font-size: 0.8rem;
   line-height: 1.2;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
   text-transform: uppercase;
   color: var(--h4-color);
+  font-weight: 400;
 }
 
 h5 {
@@ -503,7 +506,8 @@ h6 {
 
 p {
   font-size: 1rem;
-  line-height: 1.4;
+  line-height: 1.3;
+  font-weight: 350;
 }
 
 .bold {
@@ -523,6 +527,15 @@ sup {
   vertical-align: super; /* ensures it sits above the baseline */
   font-weight: normal; /* optional: adjust weight */
 }
+.mini-caption-right {
+  text-align: right;
+  margin-top: 0.5rem;
+}
+
+.mini-caption-left {
+  text-align: left;
+  margin-top: 0.5rem;
+}
 
 /* ------------------------------------------------------------------ */
 /* 🎨 Custom Class Styles for Headlines, Projects, and Highlights     */
@@ -533,6 +546,8 @@ sup {
 .hero-headline {
   text-wrap: balance; /* Prevents awkward line breaks (like elegant typography) */
   margin-inline: auto; /* Horizontally centers the text in its container */
+  text-transform: uppercase;
+  text-align: center;
 }
 .hero-headline-wrapper {
   padding: var(--padding-medium);
@@ -543,7 +558,6 @@ sup {
   font-size: 3.625rem;
   font-family: var(--font-family-project-title);
   color: var(--color-text-project-title);
-  margin-bottom: 1rem;
   font-weight: 800;
 }
 
@@ -552,7 +566,6 @@ sup {
   font-size: 1.25rem;
   line-height: 1.5;
   color: var(--color-text-project-description);
-  margin-bottom: 1rem;
 }
 
 /* 🧱 Full-width headings — useful in layouts that span edge-to-edge */
@@ -659,6 +672,10 @@ a.nav-link-projects:hover {
 
 /* Default and visited state for navigation arrows */
 
+.navigation-arrow {
+  width: 2rem;
+}
+
 .navigation-arrow:link,
 .navigation-arrow:visited {
   color: var(--color-nav-arrow);
@@ -701,7 +718,13 @@ a.nav-link-projects:hover {
 /* -------------------------------------------------------------------------- */
 
 .container {
-  padding: var(--padding-medium);
+  padding-top: var(--padding-small);
+  padding-bottom: var(--padding-small);
+}
+
+.container-bottom {
+  padding-bottom: var(--padding-small);
+  align-content: flex-end;
 }
 
 .hero-header {
@@ -731,9 +754,13 @@ a.nav-link-projects:hover {
 .nav-branding {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: var(--padding-large);
+  justify-content: center;
   align-items: center;
+  gap: 1.2rem;
+}
+
+.nav-branding > :nth-child(2) {
+  order: -1; /* Moves the second item to the top */
 }
 
 .nav-branding-projects {
@@ -749,14 +776,16 @@ a.nav-link-projects:hover {
 .nav-branding-group {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
 }
 .nav-branding-item {
-  padding: var(--padding-tiny);
   text-transform: uppercase;
+  font-weight: 800;
 }
 
 .nav-branding-logo {
-  width: 3rem;
+  width: 10rem;
   /* TODO: Adjust the width of the logo on mobile devices here */
 }
 
@@ -764,19 +793,19 @@ a.nav-link-projects:hover {
   font-size: 4rem;
 }
 
-.hero-footer {
+.project-1-hero {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(assets/wonder/wonder-hero.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: calc(100vh - 70px);
+
+  /* Flexbox centers the text overlay inside the hero box */
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  padding: var(--padding-tiny);
-}
-
-.hero-footer-navigation {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: var(--padding-small);
+  align-items: center;
 }
 
 /*
@@ -858,9 +887,7 @@ a.nav-link-projects:hover {
 .portfolio,
 .project-wrapper,
 .work-sidebar-wrapper {
-  padding: var(
-    --padding-medium
-  ); /* Padding to keep content from touching edges */
+
 }
 
 /* Work Sidebar on Mobile */
@@ -950,6 +977,12 @@ a.nav-link-projects:hover {
   /* Placeholder: no custom styles yet */
 }
 
+.work-page {
+  padding-top: var(--padding-medium);
+  padding-right: var(--padding-medium);
+  padding-left: var(--padding-medium);
+}
+
 /*
 
 ███████ ██ ██████  ███████ ██████   █████  ██████  
@@ -995,17 +1028,46 @@ a.nav-link-projects:hover {
 
 /* Grid container for the About section */
 .about-grid {
-  display: grid; /* Set to grid layout */
-  grid-template-columns: 1fr; /* Single column layout for mobile and smaller screens */
-  grid-gap: 3rem; /* Space between grid items */
-  padding: var(--padding-medium); /* Padding around the grid */
-  flex: 1; /* Flex-grow to take up available space */
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.about-grid-bento {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
 }
 
 /* Image section in the About page grid */
 .about-grid-image {
-  grid-column: 1 / 2; /* Image spans the first column */
-  grid-row: 1 / 2; /* Image spans the first row */
+  grid-column: span 2;
+  max-width: 100%;
+  height: auto;
+  justify-content: space-between;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.8rem;
+}
+.list-section {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.bottom {
+  align-content: flex-end;
+}
+
+.top {
+  align-content: flex-start;
+}
+
+.left-align {
+  justify-content: flex-start; /* Aligns items to the left */
+  align-items: flex-start;
 }
 
 /* Text section in the About page grid */
@@ -1016,12 +1078,15 @@ a.nav-link-projects:hover {
   align-content: flex-end;
 }
 
+.about-grid-detail {
+  height: 14rem;
+}
+
 .about-details {
   display: grid;
   grid-template-columns: 1fr; /* Single column layout */
   grid-gap: 2rem; /* Consistent spacing between sections */
   min-height: auto; /* Allows footer to expand based on content, no fixed height */
-  padding: var(--padding-medium); /* Internal spacing */
 }
 
 .about-section {
@@ -1031,47 +1096,51 @@ a.nav-link-projects:hover {
 /* Note: Using 'fr' units ensures proper scaling across devices */
 
 /* 
-
 ███████  ██████   ██████  ████████ ███████ ██████  
 ██      ██    ██ ██    ██    ██    ██      ██   ██ 
 █████   ██    ██ ██    ██    ██    █████   ██████  
 ██      ██    ██ ██    ██    ██    ██      ██   ██ 
 ██       ██████   ██████     ██    ███████ ██   ██ 
-                                                   
 */
 
-/* -------------------------------------------------------------------------- */
-/* 📱 MOBILE FOOTER LAYOUT                                                    */
-/* Designed with mobile-first approach using CSS Grid                          */
-/* -------------------------------------------------------------------------- */
-
-.footer-global {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 100%;
-  padding: var(--padding-medium);
-}
-
-.footer-tagline {
-}
-.footer-contact-social {
+/* MOBILE */
+.footer {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.footer-image {
+  max-width: 20rem;
+}
+
+.footer > :nth-child(2) {
+  order: 99; /* Moves the second item to the top */
+}
+
+.col-left {
+  text-align: center;
+}
+
+.col-right {
+  text-align: center;
+}
+
+.footer-line {
+  margin-bottom: 1.8rem;
+}
+
+.footer-bottom {
+  padding-bottom: var(--gap-medium);
+  align-content: flex-end;
 }
 
 /* -------------------------------------------------------------------------- */
 /* 🌊 FULL-WIDTH BOTTOM SECTION                                               */
 /* Typically used for copyright/legal information                             */
 /* -------------------------------------------------------------------------- */
-.footer-full-width {
-  grid-column: 1 / 2;
-  grid-row: 4 / 5;
-  text-align: center; /* Center copyright text */
-  align-self: end; /* Push to bottom */
-}
 
 /* ------------------------------- */
 /* 📜 Reusable footer list styles */
@@ -1126,8 +1195,9 @@ a.nav-link-projects:hover {
 }
 
 .footer-fineprint {
-  font-size: 0.875rem; /* Slightly smaller for disclaimers or captions */
+  font-size: 0.6rem; /* Slightly smaller for disclaimers or captions */
   color: var(--color-text-secondary); /* Themed color */
+  text-transform: uppercase;
 }
 
 /* New item badges */
@@ -1175,13 +1245,11 @@ a.nav-link-projects:hover {
 /* Container for the project content with full-width display */
 .project-full-width {
   width: 100%;
-  margin-bottom: 2rem;
 }
 
 /* Sidebar Styles */
 .project-aside {
   width: 100%;
-  padding: var(--padding-small);
   display: flex;
   flex-direction: column;
   color: var(--color-text-project-sidebar);
@@ -1203,17 +1271,24 @@ a.nav-link-projects:hover {
   align-items: flex-end;
   justify-content: flex-start;
   flex-direction: row;
-  background: var(--color-bg-project-description);
-  padding: var();
   width: 100%;
-  margin-bottom: 1rem; /* Space below the description */
+  padding-top: var(--padding-small);
+ padding-bottom: var(--padding-small);
+}
+
+.project-multi-image {
+ display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-direction: row;
+    width: 100%;
+    padding-bottom: var(--padding-small)
 }
 
 /* Column styles for two-column and four-column layouts (mobile-first) */
 .col-2,
 .col-4 {
   width: 100%;
-  padding: var(--padding-small);
 }
 
 /* Project image styling */
@@ -1222,12 +1297,11 @@ a.nav-link-projects:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem;
+  padding-bottom: var(--padding-small)
 }
 /* Project details section */
 .project-details {
   width: 100%;
-  padding: var(--padding-small);
 }
 
 /* Previous/Next Arrow Styles */
@@ -1242,16 +1316,30 @@ a.nav-link-projects:hover {
 }
 
 /* Styling for left and right arrows */
-.arrow-left,
-.arrow-right {
-  width: 50%;
-}
-.arrow-right {
-  text-align: right;
+.next {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
 }
 
-.arrow {
-  padding: 0;
+.next-item {
+  display: flex;
+}
+
+.next-icon {
+  width: 1.5rem;
+}
+
+a.next-icon path {
+  fill: var(--color-nav-link);
+  transition: fill 0.2s ease;
+}
+
+a.next-icon:hover path {
+  fill: var(--color-nav-link-hover);
 }
 
 /* ------------------------------- */
@@ -1412,6 +1500,8 @@ a.play-icon:hover path {
   fill: var(--color-nav-link-hover);
 }
 
+.archive-image {}
+
 /*
 
 ███████ ██   ██ ███████ ████████  ██████ ██   ██ ██████   ██████   ██████  ██   ██ 
@@ -1441,20 +1531,19 @@ a.play-icon:hover path {
 
 /* Media Queries for Layout Adjustments */
 
-/* Medium devices (tablets, 768px and up) */
-
+/* TABLET  */
 @media (min-width: 768px) {
-  /* TODO: Adjust  layout for tablets */
 }
-/* Large devices (desktops, 992px and up) */
 
-/* Switch from mobile to desktop navigation */
-
+/* DESKTOP */
 @media (min-width: 992px) {
-  /* TODO: Add or adjust styles here for large devices. */
-
   .container {
-    padding: var(--padding-large);
+    padding-top: var(--padding-small);
+    padding-bottom: var(--padding-small);
+  }
+
+  .container-bottom {
+    padding-bottom: var(--padding-small);
   }
 
   .flex-row {
@@ -1471,26 +1560,30 @@ a.play-icon:hover path {
     font-size: 2rem;
   }
 
+  /*TYPOGRAPHY*/
   /*Custom Hero*/
   h1 {
     font-family: "SashaType";
     font-size: 18rem;
   }
 
-  /*Subtitles*/
+  /*Project Titles*/
   h2 {
-    font-size: 2rem;
-    font-weight: 500;
+    font-size: 1.25rem;
+    font-weight: 00;
+    line-height: 2rem;
   }
 
-  /*Descriptions*/
+  /*Large Titles*/
   h3 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    text-wrap: balance; /* Prevents awkward line breaks (like elegant typography) */
   }
 
-  /*Mini Text*/
+  /*Mini Details*/
   h4 {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    text-wrap: balance; /* Prevents awkward line breaks (like elegant typography) */
   }
 
   h5 {
@@ -1500,6 +1593,11 @@ a.play-icon:hover path {
   .h1-full-width,
   .h2-full-width {
     width: 100%;
+  }
+  p {
+    font-size: 0.9rem;
+    line-height: 1.3;
+    font-weight: 500;
   }
 
   /* ----------------------------- */
@@ -1534,15 +1632,52 @@ a.play-icon:hover path {
 
   .nav-branding {
     flex-direction: row;
+    justify-content: space-between;
   }
 
+  .nav-branding > :nth-child(2) {
+    order: 0; /* Moves the second item to the top */
+  }
+
+  /* ---------------------- */
+  /* TOP NAVIGATION DESKTOP */
+  /* ---------------------- */
+
   .nav-branding-logo {
-    width: 3rem;
-    /* TODO: Adjust the width of the logo on large devices here. */
+    width: 15rem;
   }
 
   .hero {
     min-height: 100vh;
+  }
+
+  /* -------------- */
+  /* FOOTER DESKTOP */
+  /* -------------- */
+
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer-image {
+    max-width: 25 rem;
+  }
+
+  .footer > :nth-child(2) {
+    order: 0; /* Moves the second item to the top */
+  }
+
+  .col-left {
+    justify-self: start;
+    text-align: left;
+    margin-right: 8rem;
+
+  }
+
+  .col-right {
+    justify-self: end;
+    text-align: right;
   }
 
   .error-headline-wrapper {
@@ -1558,7 +1693,7 @@ a.play-icon:hover path {
 
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    grid-gap: 2.5rem;
+    grid-gap: 2rem;
   }
 
   /* Grayscale filter with full-colour on hover and tap */
@@ -1577,7 +1712,7 @@ a.play-icon:hover path {
   .portfolio,
   .project-wrapper,
   .work-sidebar-wrapper {
-    padding: var(--padding-large);
+  
   }
 
   /* Project Page Flex Direction on Large Devices */
@@ -1596,7 +1731,7 @@ a.play-icon:hover path {
   /* Sidebar on Large Devices */
 
   .project-aside {
-    width: 35%;
+    width: 20%;
     height: 80vh;
     position: -webkit-sticky;
     position: sticky;
@@ -1607,12 +1742,15 @@ a.play-icon:hover path {
   /* Main Project Image Area on Large Devices */
 
   .project-details {
-    width: 65%;
+    width: 80%;
+    gap: 10rem;
   }
 
   .project-image-container,
   .project-description-container {
     flex-direction: row;
+     padding-top: var(--padding-medium);
+ padding-bottom: var(--padding-medium);
   }
 
   .section-container {
@@ -1622,14 +1760,18 @@ a.play-icon:hover path {
 
   /* Column styles for two-column and four-column layouts (desktop) */
   .col-1 {
-    width: 70%;
+    width: 65%;
   }
 
   .col-2 {
-    width: 50%;
+    width: 49.2%;
   }
   .col-3 {
-    width: 30%;
+    width: 35%;
+  }
+
+  .col-4 {
+    width: 33%;
   }
 
   .project-navigation {
@@ -1637,37 +1779,29 @@ a.play-icon:hover path {
   }
 
   .arrow {
-    padding-right: 1rem;
+    width: 2.5rem;
+    margin-right: 2rem;
   }
 
-  /* About Page Grid for Large Devices */
+  /* ABOUT PAGE : LARGE DEVICES */
 
   .about-grid {
-    padding: var(--padding-large);
-    grid-template-columns: 2fr 2fr;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3rem, 1fr);
+    gap: 2rem;
+  }
+
+  .about-grid-item {
+    display: flex;
   }
 
   .about-grid-image {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-  }
-  .about-grid-text {
-    grid-row: 1 / 2;
-    grid-column: 2 / 3;
-    align-content: flex-end;
+    grid-column: span 2;
   }
 
-  .about-details {
-    padding: var(--padding-large);
-    grid-template-columns: repeat(6, 1fr);
-  }
-
-  .play-options {
-    padding: var(--padding-jumbo);
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 3rem; /* Consistent spacing between sections */
-    align-items: center;
-    justify-content: center;
+  .about-grid-detail {
+    height: 13rem;
   }
 
   .hero-name-wrapper {
@@ -1691,34 +1825,25 @@ a.play-icon:hover path {
   /* ------------------------------- */
   /* 🖥️ FOOTER GRID - DESKTOP LAYOUT */
   /* ------------------------------- */
-  .footer-global {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
-    padding: var(--padding-large);
+  .footer > :nth-child(2) {
+    order: 0; /* Moves the second item to the top */
   }
 
   /* Column 1: Contact & Social */
-  .footer-contact-social {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-right: 50px;
+  .footer-social {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr;
   }
 
   /* Column 2: Tagline/Message */
-  .footer-tagline {
-    max-width: 550px;
-    min-width: 450px;
-    margin-left: 50px;
+  .footer-contact {
   }
 
   /* ------------------------------- */
   /* 📏 FULL-WIDTH BOTTOM SECTION */
   /* ------------------------------- */
-  .footer-full-width {
+
+  0.footer-full-width {
     grid-row: 2 / 3;
     grid-column: 1 / 4; /* Spans all three columns */
     text-align: center;

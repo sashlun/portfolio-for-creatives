@@ -11,7 +11,7 @@
 */
 .masonry-grid {
   transition: all 0.5s ease-in-out;
-  column-gap: 3rem;
+  column-gap: 0.5rem;
   column-fill: initial;
 }
 
@@ -22,7 +22,7 @@
 .masonry-item {
   display: inline-block;
   vertical-align: top;
-  margin-bottom: 6rem;
+  margin-bottom: 0.5rem;
 }
 
 /* 🖼️ Image hover effects
