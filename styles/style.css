@@ -333,7 +333,7 @@ svg {
 }
 
 .padding-large {
-  padding: var(--padding-small); /* smaller, mobile-safe default */
+  padding: var(--padding-large); /* smaller, mobile-safe default */
 }
 
 .padding-jumbo {
@@ -467,7 +467,7 @@ h2 {
 h3 {
   font-size: 2.5rem;
   line-height: 1.1;
-  font-weight: 500;
+  font-weight: 700;
   color: var(--h2-color);
   text-wrap: balance;
     text-transform: uppercase;
@@ -483,12 +483,17 @@ h4 {
   font-weight: 500;
 }
 
+
+  .degree {
+      font-weight: 500;
+  }
+
 h5 {
-  font-size: 3rem;
+  font-size: 0.5rem;
   line-height: 1;
   margin-bottom: 1rem;
   color: var(--h5-color);
-  font-weight: 800;
+  font-weight: 400;
 }
 
 h6 {
@@ -662,6 +667,13 @@ a.nav-link-projects:hover {
   color: var(--color-nav-link);
 }
 
+a.underline {
+    text-decoration: none;
+}
+
+a.underline:hover {
+    text-decoration: underline;
+}
 /* -------------------------------------------------------------------------- */
 /* 🧭 Previous & Next Project Navigation Arrows                               */
 /* These styles are for the left and right arrows used to move between       */
@@ -715,6 +727,13 @@ a.nav-link-projects:hover {
 /* Full-page intro area with logo, headline, icon, and footer nav             */
 /* Great place for first impression and personal branding                     */
 /* -------------------------------------------------------------------------- */
+
+  .hero {
+    min-height: 50vh;
+  display: flex;
+  justify-content: center; /* Aligns horizontally */
+  align-items: center; 
+  }
 
 .container {
   padding-top: var(--padding-small);
@@ -785,12 +804,11 @@ a.nav-link-projects:hover {
 }
 .nav-branding-item {
   text-transform: uppercase;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .nav-branding-logo {
   width: 10rem;
-  /* TODO: Adjust the width of the logo on mobile devices here */
 }
 
 .hero-icon {
@@ -909,6 +927,28 @@ a.nav-link-projects:hover {
 
 /* Defining the work page grid */
 .grid {
+display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem
+  }
+
+  project-cover {
+      display: flex;
+  overflow: hidden;
+  }
+
+project-cover img{
+    width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+  project-cover-wonder {
+  width: 5rem;
+  }
+
+  .0grid {
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
@@ -1013,6 +1053,7 @@ a.nav-link-projects:hover {
   margin-bottom: 1rem; /* Space between each navigation item */
 }
 
+
 /* 
 
  █████  ██████   ██████  ██    ██ ████████ 
@@ -1049,16 +1090,28 @@ a.nav-link-projects:hover {
 
 .space-between-row {
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  flex-direction: row;
+  justify-content: space-between;
   width: 100%;
   height: auto;
+
 }
+
+.align-bottom {
+    align-items: flex-end;
+}
+
+
 
 .space-between-column {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+.right-align { 
+align-self: flex-end;
+text-align: end;
 }
 
 .about-image-detail {
@@ -1082,6 +1135,13 @@ a.nav-link-projects:hover {
   flex-direction: row;
   gap: 0.5rem;
   align-items: center;
+}
+
+.icon-text-bento {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0.5rem;
 }
 
 /* Image section in the About page grid */
@@ -1154,15 +1214,32 @@ a.nav-link-projects:hover {
 
 /* MOBILE */
 .footer {
-display: grid;
-grid-template-columns: 1fr;
-gap: 1rem;
-
+  background-color: #2a2a2a;
 }
+  .grid-footer{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: end;
+  }
+
+    .grid-footer-socials{
+        display: grid;
+    grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: end;
+  }
+
 
 .footer-image {
-  width: 24rem;
+  width: 40rem;
   height: auto;
+  display: flex;
+  justify-self: center; /* Centers horizontally */
+  align-item: center;     /* Centers vertically */
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
   .footer-logo {
@@ -1211,6 +1288,11 @@ gap: 1rem;
   flex-direction: column;
   gap: 1rem;
   align-items: center;
+}
+
+.img-404 {
+  width: 30rem;
+  height: auto;
 }
 
 .footer-bottom {
@@ -1332,6 +1414,10 @@ gap: 1rem;
   grid-column: span 2;
 }
 
+.span-three {
+  grid-column: span 3;
+}
+
 .hover-container img{
    display: block;
    transition: opacity 0.2s ease-in-out;
@@ -1345,14 +1431,20 @@ gap: 1rem;
 .project-images {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 
     .image-bento-two {
  display: grid;
  grid-template-columns: 1fr;
-gap: 0.5rem;
+gap: 1rem;
+}
+
+    .image-bento-three {
+ display: grid;
+ grid-template-columns: 1fr;
+gap: 1rem;
 }
 
 .column-two {
@@ -1422,9 +1514,7 @@ gap: 0.5rem;
 
 /* Project image styling */
 .project-image {
-  padding-bottom: var(--padding-tiny);
-    padding-top: var(--padding-tiny);
-
+  border-radius: var(--radius-sm);
 }
 /* Project details section */
 .project-details {
@@ -1594,6 +1684,40 @@ a.next-icon:hover path {
   height: 15rem;
   width: 15rem;
 }
+
+/* The overall scrollbar width/height */
+html::-webkit-scrollbar {
+  width: 10px; /* Vertical scrollbar width */
+  height: 10px; /* Horizontal scrollbar height */
+}
+
+/* The background track of the scrollbar */
+html::-webkit-scrollbar-track {
+  background: #719A00;
+  border-radius: 10px;
+}
+
+/* The draggable thumb handler */
+html::-webkit-scrollbar-thumb {
+  background: #719A00;
+  border-radius: 10px;
+  border: 2px solid #719A00; /* Creates padding around the thumb */
+}
+
+/* Hover effect on the thumb handler */
+html::-webkit-scrollbar-thumb:hover {
+  background: #719A00;
+}
+
+
+
+
+html {
+  /* Syntax: scrollbar-color: [Thumb Color] [Track Color]; */
+  scrollbar-color: #555555 #f1f1f1;
+  /* Options: auto | thin | none */
+  scrollbar-width: thin; 
+}
 /*
 
 ██████  ██       █████  ██    ██ 
@@ -1635,8 +1759,10 @@ a.play-icon:hover path {
   fill: var(--color-nav-link-hover);
 }
 
-.archive-image {}
-
+.arrow {
+  height: auto;
+  width: 2rem;
+}
 /*
 
 ███████ ██   ██ ███████ ████████  ██████ ██   ██ ██████   ██████   ██████  ██   ██ 
@@ -1678,8 +1804,10 @@ a.play-icon:hover path {
   }
 
   .grid {
-    grid-gap: 2rem;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2rem
   }
+
 
   .footer-logo-text {
   display: flex;
@@ -1700,14 +1828,6 @@ a.play-icon:hover path {
   order: 3;
 }
 
-  .footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: space-between;
-    align-items: end;
-  }
-}
-
 /* DESKTOP */
 @media (min-width: 992px) {
 .work-page {
@@ -1718,12 +1838,7 @@ a.play-icon:hover path {
     padding-top: var(--padding-small);
     padding-bottom: var(--padding-small);
   }
-    .container-large {
-    padding-top: var(--padding-large);
-    padding-bottom: var(--padding-large);
-  }
-
-  .container-bottom {
+   .container-bottom {
     padding-bottom: var(--padding-small);
   }
 
@@ -1765,7 +1880,7 @@ a.play-icon:hover path {
   }
 
   h5 {
-    font-size: 4.5rem;
+    font-size: 0.8rem;
   }
 
   .h1-full-width,
@@ -1773,7 +1888,7 @@ a.play-icon:hover path {
     width: 100%;
   }
   p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     line-height: 1.3;
   }
 
@@ -1825,7 +1940,23 @@ a.play-icon:hover path {
   }
 
   .hero {
-    min-height: 100vh;
+    min-height: 75vh;
+  }
+
+  .hero img{
+    height: 20rem;
+  }
+
+  .home-button {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000; /* Keeps it on top of other elements */
+  margin: 1rem;  /* Optional spacing from the edge */
+  background-color: #719A00;
+  border: none;
+  border-radius: 2px;
+  padding: 0.5rem 1rem;
   }
 
   /* -------------- */
@@ -1836,12 +1967,16 @@ a.play-icon:hover path {
 
   /* Work Page Grid for Large Devices */
 
-  .grid {
+  .0grid {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   }
 
     .image-bento-two {
    grid-template-columns: repeat(2, 1fr);
+}
+
+    .image-bento-three {
+   grid-template-columns: repeat(3, 1fr);
 }
 
   /* Grayscale filter with full-colour on hover and tap */
@@ -1959,15 +2094,6 @@ a.play-icon:hover path {
   gap: 1.5rem;
 }
 
-.space-between-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  height: auto;
-  align-items: flex-end;
-}
-
   .hero-name-container {
     display: flex;
     flex-wrap: wrap;
@@ -2005,25 +2131,11 @@ a.play-icon:hover path {
   order: 3;
 }
 
-.footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: space-between;
-    align-items: end;
-}
 
-.footer-image {
-   width: 45rem;
-   height: auto;
-   margin-top: 0.5rem;
-}
-
-  .footer-grid{
+  .grid-footer{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-    align-items: end;
   }
 
   .col-left {
@@ -2068,7 +2180,7 @@ a.play-icon:hover path {
 @media (min-width: 1200px) {
   /* TODO: Add styles here for X-large devices. */
 
-  .grid {
+  .0grid {
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   }
 }
@@ -2078,7 +2190,7 @@ a.play-icon:hover path {
 @media (min-width: 1400px) {
   /* TODO: Add styles here for XX-large devices. */
 
-  .grid {
+  .0grid {
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   }
 }
