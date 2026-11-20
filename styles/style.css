@@ -24,15 +24,7 @@
 ██       ██████  ██   ████    ██    ███████ 
 */
 
-/* ------------------------------- */
-/* 🌐 Google Fonts - Customize Your Site's Typography */
-/* You can add your own fonts here, but be mindful of performance */
-/* ------------------------------- */
-
-/* TODO: Replace these Google Fonts with the ones you want to use on your site. */
-/* Remember, the more fonts you load, the longer it can take for your page to load. */
-
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"rel="stylesheet");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
 /*
 ƒ
@@ -100,47 +92,47 @@
   --font-family-project-title: "Outfit", sans-serif;
   /* Core Colours */
   --color-text-primary: #2a2a2a;
-  --color-text-secondary: #F0F0F0;
+  --color-text-secondary: #f0f0f0;
   --color-accent-primary: #transparent;
   --color-accent-secondary: #719a00;
   --color-overlay-primary: rgba(245, 245, 243, 0.25);
-  --color-highlight: lemonchiffon;
+  --color-highlight: #719a00;
   --color-fallback: #313131; /* Fallback color for glitch effect on 404 page */
   /* Backgrounds */
-  --color-bg: #F0F0F0;
+  --color-bg: #f0f0f0;
   --color-bg-about: #x;
-  --color-bg-footer: #F0F0F0;
-  --color-bg-holding-page: rgba(82, 0, 255, 0.6);
+  --color-bg-footer: #f0f0f0;
+  --color-bg-holding-page: #719a00;
   /* Headings */
-  --h1-color: #2A2A2A;
+  --h1-color: #2a2a2a;
   --h2-color: #2a2a2a;
   --h3-color: #2a2a2a;
   --h4-color: #2a2a2a;
   --h5-color: #2a2a2a;
   --h6-color: #2a2a2a;
   /* Special Text Colours */
-  --color-text-holding-title: #F0F0F0;
-  --color-text-project-category: #2A2A2A;
-  --color-text-project-description: #2A2A2A;
-  --color-text-project-sidebar: #2A2A2A;
-  --color-text-project-title: #2A2A2A;
-  --color-text-work-grid-title: #2A2A2A;
+  --color-text-holding-title: #f0f0f0;
+  --color-text-project-category: #2a2a2a;
+  --color-text-project-description: #2a2a2a;
+  --color-text-project-sidebar: #2a2a2a;
+  --color-text-project-title: #2a2a2a;
+  --color-text-work-grid-title: #2a2a2a;
   /* Link States */
-  --color-link: #2A2A2A;
+  --color-link: #2a2a2a;
   --color-link-hover: #719a00;
-  --color-link-visited: #2A2A2A;
+  --color-link-visited: #2a2a2a;
   /* Navigation */
-  --color-nav-link: #2A2A2A;
+  --color-nav-link: #2a2a2a;
   --color-nav-link-hover: #719a00;
-  --color-nav-arrow: #2A2A2A;
+  --color-nav-arrow: #2a2a2a;
   --color-nav-arrow-hover: #719a00;
-  --color-nav-arrow-stroke: #2A2A2A;
+  --color-nav-arrow-stroke: #2a2a2a;
   --color-nav-arrow-stroke-hover: #719a00;
   /* Components */
-  --color-bg-full-width: #F0F0F0;
-  --color-bg-project-description: #F0F0F0;
+  --color-bg-full-width: #f0f0f0;
+  --color-bg-project-description: #f0f0f0;
   --color-bg-sidebar-project: transparent;
-  --color-bg-sidebar-work: #F0F0F0;
+  --color-bg-sidebar-work: #f0f0f0;
   --color-gradient-hero: linear-gradient(90deg, #ff00ff, #00ffff);
   --color-gradient-project-details: linear-gradient(
     -225deg,
@@ -149,8 +141,8 @@
     #321575 100%
   );
   /* Special Elements */
-  --color-icon-heart: #2A2A2A;
-  --color-text-holding-footer: #F0F0F0;
+  --color-icon-heart: #2a2a2a;
+  --color-text-holding-footer: #f0f0f0;
   --color-bg-selection: #cbeb74;
   --color-shadow-stroke: rgba(0, 0, 0, 0.4);
   /* Assets */
@@ -204,10 +196,11 @@ html {
   cursor:
     url("../assets/personalbranding/cursor.svg"), auto !important; /* Custom cursor (change the URL below to use your own) */
 
-    a, button, .custom-clickable {
-  cursor: url("../assets/personalbranding/pointer.svg"), pointer;
-  
-}
+  a,
+  button,
+  .custom-clickable {
+    cursor: url("../assets/personalbranding/pointer.svg"), pointer;
+  }
 
   /* TODO: Replace the URL above to add a custom cursor. 
      If you want to use the default browser cursor, just delete this line. */
@@ -266,20 +259,11 @@ svg {
 /* ------------------------ */
 
 /* Horizontally centers a block element (must have a defined width) */
-.centered-block {
-  margin: 0 auto;
-}
 
 /* Vertical layout – stacks items in a column (mobile-first) */
 .flex-row {
   display: flex;
   flex-direction: column;
-}
-
-/* Puts the box on its own line and adds space underneath */
-.margin-bottom {
-  display: block; /* Makes it a block so it stacks nicely */
-  margin-bottom: 1rem; /* Adds space below – helps with layout breathing room */
 }
 
 .width-third,
@@ -298,9 +282,6 @@ svg {
 /* ---------------------- */
 
 /* Optimal line length for readability (~60 characters) */
-.max-text-width {
-  max-width: 60ch;
-}
 
 /* Centers your text (great for headings or buttons) */
 .centered-text {
@@ -314,11 +295,6 @@ svg {
 /* Smooth transition when applying transformations – improves hover experience */
 .rotate {
   transition: transform;
-}
-
-/* Rotates the element slightly on hover – adds a playful effect */
-.rotate:hover {
-  transform: rotate();
 }
 
 /* ----------------------------- */
@@ -451,6 +427,7 @@ svg {
 h1 {
   font-family: "SashaType";
   font-size: 10rem;
+  text-wrap: balance;
 }
 
 /*Project Titles*/
@@ -460,12 +437,7 @@ h2 {
   font-weight: 600;
   color: var(--h2-color);
   text-transform: uppercase;
-
-}
-
-/*Bold*/
-.bold {
-  font-weight: 600;
+  text-wrap: balance;
 }
 
 /*Large*/
@@ -475,8 +447,7 @@ h3 {
   font-weight: 600;
   color: var(--h2-color);
   text-wrap: balance;
-    text-transform: uppercase;
-
+  text-transform: uppercase;
 }
 
 /*Mini Details*/
@@ -486,6 +457,7 @@ h4 {
   text-transform: uppercase;
   color: var(--h4-color);
   font-weight: 500;
+  text-wrap: balance;
 }
 
 h5 {
@@ -494,6 +466,7 @@ h5 {
   margin-bottom: 1rem;
   color: var(--h5-color);
   font-weight: 400;
+  text-wrap: balance;
 }
 
 h6 {
@@ -501,6 +474,7 @@ h6 {
   line-height: 1.2;
   margin-bottom: 1rem;
   color: var(--h6-color);
+  text-wrap: balance;
 }
 
 /* ------------------------------------------------------------------ */
@@ -512,10 +486,12 @@ p {
   font-size: 1rem;
   line-height: 1.3;
   font-weight: 500;
+  text-wrap: balance;
 }
 
+/*Bold*/
 .bold {
-  font-weight: 800; /* Makes text bold */
+  font-weight: 600;
 }
 
 .underline {
@@ -533,19 +509,11 @@ sup {
 }
 
 .line {
-  height: 0.1rem; 
-  border: none; 
-  background-color:#2A2A2A;
-margin-block-start: 1em;
-    margin-block-end: 1em;
-}
-
-.line-light {
-    height: 0.1rem; 
-  border: none; 
-  background-color:#F0F0F0;
-margin-block-start: 1em;
-    margin-block-end: 1em;
+  height: 0.1rem;
+  border: none;
+  background-color: #2a2a2a;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
 }
 
 /* ------------------------------------------------------------------ */
@@ -579,24 +547,9 @@ margin-block-start: 1em;
   color: var(--color-text-project-description);
 }
 
-/* 🧱 Full-width headings — useful in layouts that span edge-to-edge */
-.h1-full-width,
-.h2-full-width {
-  width: 100%;
-  padding-top:;
-  text-align: left;
-}
-
 /* ✨ Highlighted text — great for emphasis */
 .highlight-primary {
   color: var(--color-accent-secondary);
-}
-
-.highlight-gradient {
-  background: var(--color-gradient-hero);
-  -webkit-background-clip: text;
-  color: transparent;
-  font-weight: bold;
 }
 
 /* 📂 Project grid title — used in grid view (like a portfolio gallery) */
@@ -609,6 +562,46 @@ margin-block-start: 1em;
 .work-grid-project-category {
   color: var(--color-text-project-category);
   text-transform: uppercase;
+}
+
+.flip-link {
+  display: inline-block;
+  overflow: hidden;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #2a2a2a;
+  perspective: 1000px; /* Adds 3D depth */
+}
+
+.flip-link span {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+  transform-origin: 50% 0%;
+  transform-style: preserve-3d;
+}
+
+/* Duplicate text positioned below and angled away */
+.flip-link span::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  color: #719a00; /* Accent color on hover */
+  transform: rotateX(-90deg);
+  transform-origin: 50% 0%;
+}
+
+/* Rotate up on hover */
+.flip-link:hover span {
+  transform: rotateX(90deg) translateY(-100%);
+}
+
+.material-symbols-outlined {
+  font-size: 0.8rem;
+  color: #2a2a2a;
+  justify-content: end;
 }
 
 /*
@@ -676,11 +669,11 @@ a.nav-link-projects:hover {
 }
 
 a.underline {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 a.underline:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .hover-underline {
@@ -691,7 +684,7 @@ a.underline:hover {
 }
 
 .hover-underline::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 1.5px;
@@ -707,9 +700,6 @@ a.underline:hover {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-
-
-
 
 /* -------------------------------------------------------------------------- */
 /* 🧭 Previous & Next Project Navigation Arrows                               */
@@ -765,12 +755,12 @@ a.underline:hover {
 /* Great place for first impression and personal branding                     */
 /* -------------------------------------------------------------------------- */
 
-  .hero {
-    min-height: 50vh;
+.hero {
+  min-height: 50vh;
   display: flex;
   justify-content: center; /* Aligns horizontally */
-  align-items: center; 
-  }
+  align-items: center;
+}
 
 .container {
   padding-top: var(--padding-small);
@@ -805,10 +795,6 @@ a.underline:hover {
   width: 100%;
   text-wrap: balance; /* Prevents awkward line breaks (like elegant typography) */
   margin-inline: auto; /* Horizontally centers the text in its container */
-}
-
-.hero-name {
-  flex: 3 (1fr);
 }
 
 .nav-branding {
@@ -946,7 +932,6 @@ a.underline:hover {
 .portfolio,
 .project-wrapper,
 .work-sidebar-wrapper {
-
 }
 
 /* Work Sidebar on Mobile */
@@ -963,64 +948,43 @@ a.underline:hover {
 }
 
 /* Defining the work page grid */
-    .grid-six {
-display: grid;
+.grid-six {
+  display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem
-  }
+  gap: 1rem;
+}
 
-  .grid-four {
-display: grid;
+.grid-four {
+  display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem
-  }
+  gap: 1rem;
+}
 
-  .grid-ten {
-    display: grid;
+.grid-ten {
+  display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem
-  }
+  gap: 1rem;
+}
 
-  .grid-twelve {
-        display: grid;
+.grid-twelve {
+  display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem
-  }
+  gap: 1rem;
+}
 
-  .project-cover {
-    display: inline-block;
+.project-cover {
+  display: inline-block;
   vertical-align: top;
   overflow: hidden;
-  }
+}
 
-.project-cover img{
+.project-cover img {
   transition: all 0.3s ease-in-out;
   backface-visibility: hidden;
 }
 
 .project-cover:hover img {
-    transform: scale(1.05);
-}
-
-  .0grid {
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(300px, 1fr)
-  ); /* Creates a responsive grid */
-  grid-gap: 0.5rem; /* Space between grid items */
-  /* The auto-fit and minmax() function help ensure responsiveness across screen sizes */
-    grid-gap: 2rem;
-  }
-
-.grid-work {
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(300px, 1fr)
-  ); /* Creates a responsive grid */
-  grid-gap: 0.5rem; /* Space between grid items */
-  /* The auto-fit and minmax() function help ensure responsiveness across screen sizes */
+  transform: scale(1.03);
 }
 
 /* Individual Work Grid Item */
@@ -1036,10 +1000,6 @@ display: grid;
 }
 
 /* Project container for background and padding */
-.project-container {
-  background: transparent; /* Set project background color */
-  padding: var(--padding-tiny);
-}
 
 /* (appears on hover) */
 .overlay {
@@ -1081,7 +1041,11 @@ display: grid;
 }
 
 .project-page {
-    padding: var(--padding-small);
+  padding: var(--padding-medium);
+}
+
+.project-page {
+  padding: var(--padding-small);
 }
 
 /*
@@ -1100,17 +1064,6 @@ display: grid;
 /* This section contains styles for the sidebar navigation on the portfolio    */
 /* website. The aim is to create a simple and clean sidebar for better access. */
 /* -------------------------------------------------------------------------- */
-
-/* Sidebar navigation list styles */
-.sidebar-nav-list {
-  padding: var(--padding-small); /* Adds padding around the navigation list */
-}
-
-/* Individual navigation item styles */
-.sidebar-nav-item {
-  margin-bottom: 1rem; /* Space between each navigation item */
-}
-
 
 /* 
 
@@ -1135,18 +1088,6 @@ display: grid;
   gap: 1rem;
 }
 
-.column-one-two {
-    display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-}
-
-.about-columns {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-}
-
 .about-columns-hero > :nth-child(2) {
   order: -1;
 }
@@ -1162,8 +1103,7 @@ display: grid;
 .space-between-row-footer {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 2rem;
+  gap: var(--gap-medium);
   align-items: center;
 }
 
@@ -1171,29 +1111,29 @@ display: grid;
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .project-row-two {
   display: grid;
   grid-template-columns: 1fr;
-    gap: 1.5rem;
-      padding-top: 1rem;
-  padding-bottom: 1rem;
+  gap: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .project-row-three {
   display: grid;
   grid-template-columns: 1fr;
-    gap: 1.5rem;
-      padding-top: 1rem;
-  padding-bottom: 1rem;
+  gap: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .align-bottom {
-    align-items: flex-end;
-    text-align: end;
+  align-items: flex-end;
+  text-align: end;
 }
 
 .space-between-column {
@@ -1202,25 +1142,26 @@ display: grid;
   gap: 2rem;
 }
 
-.align-right { 
-align-self: flex-end;
-text-align: end;
+.align-right {
+  align-self: flex-end;
+  text-align: end;
 }
 
 .align-left {
   align-self: flex-start;
-text-align: start;
+  text-align: start;
 }
 
 .align-top {
-    align-items: flex-start;
-    align-self: flex-start;
+  align-items: flex-start;
+  align-self: flex-start;
 }
 
 .align-center {
-display: flex;
+  display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
+  text-align: center;
 }
 
 .about-image-detail {
@@ -1252,32 +1193,23 @@ display: flex;
 }
 
 .icon-text-bento {
-  display: grid;
-  grid-template-columns: 1fr 6fr;
-  grid-template-rows: repeat(4, 1fr);
-  gap: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap-small);
 }
-
-/* Image section in the About page grid */
 
 .list {
   display: flex;
   flex-direction: column;
-  row-gap: 1rem;
+  row-gap: var(--gap-tiny);
   align-items: flex-start;
 }
 
 .list-section {
   display: flex;
   flex-direction: column;
-  row-gap: 2rem;
+  row-gap: var(--gap-small);
   flex-wrap: wrap;
-}
-
-.list-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.2rem;
 }
 
 .list-horizontal {
@@ -1293,45 +1225,15 @@ display: flex;
   row-gap: 0.25rem;
 }
 
-.about-list-section {
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-}
-
-/* Text section in the About page grid */
-.about-grid-text {
-  grid-column: 1 / 2; /* Text spans the first column */
-  grid-row: 2 / 3; /* Text spans the second row */
-  gap: 1rem;
-  align-content: flex-end;
-}
-
-.about-grid-detail {
-  height: 14rem;
-}
-
-.about-details {
-  display: grid;
-  grid-template-columns: 1fr; /* Single column layout */
-  grid-gap: 2rem; /* Consistent spacing between sections */
-  min-height: auto; /* Allows footer to expand based on content, no fixed height */
-}
-
-.about-section {
-  line-height: 1; /* Consistent line height for footer items to improve spacing */
-}
-
 .column-four {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
-
-  .column-three-odd {
-    display: grid;
+}
+.column-three-odd {
+  display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
-}
 }
 /* Note: Using 'fr' units ensures proper scaling across devices */
 
@@ -1344,37 +1246,17 @@ display: flex;
 */
 
 /* MOBILE */
-.footer {
-  background-color: #2a2a2a;
-}
-  .grid-footer{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    align-items: end;
-  }
-
-    .grid-footer-socials{
-        display: grid;
-    grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-    gap: 2rem;
-    align-items: end;
-  }
-
-
-
 
 .footer-image {
   width: 30rem;
 }
 
-  .footer-logo {
+.footer-logo {
   height: 4.5rem;
   width: auto;
-  }
+}
 
-  .footer > :nth-child(1) {
+.footer > :nth-child(1) {
   order: 2;
 }
 
@@ -1386,45 +1268,9 @@ display: flex;
   order: 1;
 }
 
-.col-left {
-  text-align: center;
-}
-
-.col-right {
-  text-align: center;
-}
-
-.col-center {
-    display: flex;
-  flex-direction: column;
-    align-items: center;
-      justify-content: center;
-
-}
-
-.footer-socials {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  justify-content: center;
-    align-items: center;
-}
-
-.footer-logo-text {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: center;
-}
-
 .img-404 {
   height: 20rem;
   width: auto;
-}
-
-.footer-bottom {
-  padding-bottom: var(--gap-medium);
-  align-content: flex-end;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -1521,15 +1367,15 @@ display: flex;
 /* Wrapper for the main project section and sidebar */
 
 .background-grey {
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
 }
 
 .dark-mode {
-  background-color: #2A2A2A;
+  background-color: #2a2a2a;
 }
 
 .light-mode-text {
-    color: var(--color-text-secondary);
+  color: var(--color-text-secondary);
 }
 
 .project-option {
@@ -1550,37 +1396,14 @@ display: flex;
   left: 0px;
 }
 
-.span-half {
-    grid-column: span 0.5;
-
-}
-
 .span-two {
   grid-column: span 2;
 }
 
-.span-three {
-  grid-column: span 3;
-}
-
-.span-four {
-    grid-column: span 4;
-}
-.span-five {
-    grid-column: span 5;
-    grid-row: span 2;
-}
-
-.span-six {
-    grid-column: span 6;
-        grid-row: span 2;
-}
-
-
-.hover-container img{
-   display: block;
-   transition: opacity 0.2s ease-in-out;
-   object-fit: cover;
+.hover-container img {
+  display: block;
+  transition: opacity 0.2s ease-in-out;
+  object-fit: cover;
 }
 
 .hover-container:hover .img-hover {
@@ -1593,35 +1416,27 @@ display: flex;
   gap: 1rem;
 }
 
-
-    .image-bento-two {
- display: grid;
- grid-template-columns: 1fr;
-gap: 1rem;
+.image-bento-two {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
 }
 
-    .image-bento-three {
- display: grid;
- grid-template-columns: 1fr;
-gap: 1rem;
+.image-bento-three {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
 }
-
-
 
 .column-two-odd {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-    gap: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 0.5rem;
 }
 
 .column-two-even {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-}
-
-.margin-top {
-  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .end {
@@ -1670,7 +1485,7 @@ gap: 1rem;
   flex-direction: column;
   width: 100%;
   padding-top: var(--padding-small);
- padding-bottom: var(--padding-small);
+  padding-bottom: var(--padding-small);
 }
 
 /* Column styles for two-column and four-column layouts (mobile-first) */
@@ -1709,14 +1524,6 @@ gap: 1rem;
   width: 100%;
 }
 
-.next-item {
-  display: flex;
-}
-
-.next-icon {
-  width: 1.5rem;
-}
-
 a.next-icon path {
   fill: var(--color-nav-link);
   transition: fill 0.2s ease;
@@ -1749,6 +1556,34 @@ a.next-icon:hover path {
   font-size: 1rem;
   line-height: 1.2; /* Consistent line height for project items to improve spacing */
   margin-bottom: 0.25rem;
+}
+
+.previous-button {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000; /* Keeps it on top of other elements */
+  margin: 1rem; /* Optional spacing from the edge */
+  background-color: #719a00;
+  border: none;
+  border-radius: 2px;
+  padding: 0.5rem 0.8rem;
+}
+
+.next-button {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1000; /* Keeps it on top of other elements */
+  margin: 1rem; /* Optional spacing from the edge */
+  background-color: #719a00;
+  border: none;
+  border-radius: 2px;
+  padding: 0.5rem 0.8rem;
+}
+
+.padding-project {
+  padding: none;
 }
 
 /*
@@ -1860,30 +1695,27 @@ html::-webkit-scrollbar {
 
 /* The background track of the scrollbar */
 html::-webkit-scrollbar-track {
-  background: #719A00;
+  background: #719a00;
   border-radius: 10px;
 }
 
 /* The draggable thumb handler */
 html::-webkit-scrollbar-thumb {
-  background: #719A00;
+  background: #719a00;
   border-radius: 10px;
-  border: 2px solid #719A00; /* Creates padding around the thumb */
+  border: 2px solid #719a00; /* Creates padding around the thumb */
 }
 
 /* Hover effect on the thumb handler */
 html::-webkit-scrollbar-thumb:hover {
-  background: #719A00;
+  background: #719a00;
 }
-
-
-
 
 html {
   /* Syntax: scrollbar-color: [Thumb Color] [Track Color]; */
   scrollbar-color: #555555 #f1f1f1;
   /* Options: auto | thin | none */
-  scrollbar-width: thin; 
+  scrollbar-width: thin;
 }
 /*
 
@@ -1961,68 +1793,91 @@ a.play-icon:hover path {
 
 /* TABLET  */
 @media (min-width: 768px) {
-    .nav-branding {
+  .nav-branding {
     flex-direction: row;
     justify-content: space-between;
   }
 
-    .nav-branding > :nth-child(2) {
+  .nav-branding > :nth-child(2) {
     order: 0; /* Moves the second item to the top */
   }
 
   .grid-six {
-  grid-template-columns: repeat(6, 1fr);
-  gap: 2rem
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
   }
 
   .grid-four {
-      grid-template-columns: repeat(4, 1fr);
-  gap: 2rem
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
   }
 
-    .grid-ten {
-      grid-template-columns: repeat(10, 1fr);
+  .grid-ten {
+    grid-template-columns: repeat(10, 1fr);
   }
-
 
   .grid-twelve {
-      grid-template-columns: repeat(12, 1fr);
-      grid-template-rows: repeat(1fr 2fr 1fr 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr 2fr 1fr 1fr;
   }
 
   .footer > :nth-child(1) {
-  order: 1;
-}
+    order: 1;
+  }
 
-.footer > :nth-child(2) {
-  order: 2;
-}
+  .footer > :nth-child(2) {
+    order: 2;
+  }
 
-.footer > :nth-child(3) {
-  order: 3;
+  .footer > :nth-child(3) {
+    order: 3;
+  }
+
+  .project-row-one {
+    grid-template-columns: 4fr 2fr;
+    gap: 4rem;
+  }
+
+  .project-row-two {
+    grid-template-columns: 3fr 3fr;
+    gap: 4rem;
+  }
+
+  .project-row-three {
+    grid-template-columns: 2fr 4fr;
+    gap: 4rem;
+  }
 }
 
 /* DESKTOP */
 @media (min-width: 992px) {
-.work-page {
+  .work-page {
     padding-right: var(--padding-medium);
-  padding-left: var(--padding-medium);
-  padding-bottom: var(--padding-small);
-  padding-top: var(--padding-medium);
-}
+    padding-left: var(--padding-medium);
+    padding-bottom: var(--padding-small);
+    padding-top: var(--padding-medium);
+  }
 
-.project-page {
-  padding-right: var(--padding-medium);
-  padding-left: var(--padding-medium);
-  padding-bottom: var(--padding-small);
-  padding-top: var(--padding-tiny);
-}
+  .project-page {
+    padding-right: var(--padding-medium);
+    padding-left: var(--padding-medium);
+    padding-bottom: var(--padding-small);
+    padding-top: var(--padding-tiny);
+  }
+
+  .project-images {
+    padding-left: var(--padding-ultra);
+    padding-right: var(--padding-ultra);
+    padding-top: var(--padding-small);
+    padding-bottom: var(--padding-small);
+    gap: 1rem;
+  }
 
   .container {
     padding-top: var(--padding-small);
     padding-bottom: var(--padding-small);
   }
-   .container-bottom {
+  .container-bottom {
     padding-bottom: var(--padding-small);
   }
 
@@ -2041,23 +1896,22 @@ a.play-icon:hover path {
   }
 
   .about-image-detail {
-  width: 14rem;
-  height: auto;
-}
+    width: 14rem;
+    height: auto;
+  }
 
   .column-to-row {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
 
   .footer-logo-text {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  align-items: end;
-}
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: end;
+  }
 
   /*TYPOGRAPHY*/
   /*Custom Hero*/
@@ -2146,20 +2000,8 @@ a.play-icon:hover path {
     min-height: 75vh;
   }
 
-  .hero img{
+  .hero img {
     height: 30rem;
-  }
-
-  .home-button {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 1000; /* Keeps it on top of other elements */
-  margin: 1rem;  /* Optional spacing from the edge */
-  background-color: #719A00;
-  border: none;
-  border-radius: 2px;
-  padding: 0.5rem 1rem;
   }
 
   /* -------------- */
@@ -2167,37 +2009,38 @@ a.play-icon:hover path {
   /* -------------- */
 
   .space-between-row-footer {
-  flex-direction: row;
-  width: 100%;
-  height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    text-align: end;
   }
 
   .project-row-one {
-  grid-template-columns: 4fr 2fr;
+    grid-template-columns: 4fr 2fr;
+    gap: 8rem;
   }
 
   .project-row-two {
-  grid-template-columns: 3fr 3fr;
-}
+    grid-template-columns: 3fr 3fr;
+    gap: 8rem;
+  }
 
-.project-row-three {
-  grid-template-columns: 2fr 4fr;
-}
-
+  .project-row-three {
+    grid-template-columns: 2fr 4fr;
+    gap: 8rem;
+  }
 
   /* Work Page Grid for Large Devices */
 
-  .0grid {
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  .image-bento-two {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-    .image-bento-two {
-   grid-template-columns: repeat(2, 1fr);
-}
-
-    .image-bento-three {
-   grid-template-columns: repeat(3, 1fr);
-}
+  .image-bento-three {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
   /* Grayscale filter with full-colour on hover and tap */
 
@@ -2210,12 +2053,15 @@ a.play-icon:hover path {
     filter: grayscale(0);
   }
 
+  .padding-project {
+    padding: var(--padding-jumbo);
+  }
+
   /* Padding around work grid and project page */
 
   .portfolio,
   .project-wrapper,
   .work-sidebar-wrapper {
-  
   }
 
   /* Project Page Flex Direction on Large Devices */
@@ -2246,15 +2092,15 @@ a.play-icon:hover path {
 
   .project-details {
     width: 80%;
-    gap: 10rem; 
+    gap: 10rem;
   }
 
   .project-image-container,
   .project-description-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-      padding-top: var(--padding-medium);
- padding-bottom: var(--padding-medium);
+    padding-top: var(--padding-medium);
+    padding-bottom: var(--padding-medium);
   }
 
   .section-container {
@@ -2267,61 +2113,57 @@ a.play-icon:hover path {
   }
 
   /* ABOUT PAGE : LARGE DEVICES */
-.column-three {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-}
-
-.column-one-two {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-    gap: 2rem;
-}
-
-.column-four {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-}
-
-.column-three-odd {
+  .column-three {
     display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 1.5rem;
-}
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
 
-.about-image {
-  width: 100%;
+  .column-one-two {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+  }
+
+  .column-four {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  .column-three-odd {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .about-image {
+    width: 100%;
     height: 36rem;
-  object-fit: cover;
+    object-fit: cover;
     overflow: hidden;
-}
+  }
 
-.about-list-section {
-  flex-direction: column;
-}
+  .about-list-section {
+    flex-direction: column;
+  }
 
-.about-columns-hero > :nth-child(2) {
-  order: 2;
-}
+  .about-columns-hero > :nth-child(2) {
+    order: 2;
+  }
 
-.space-between-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  gap: 1.5rem;
-}
+  .space-between-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    gap: 1.5rem;
+  }
 
   .hero-name-container {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-  }
-
-  .hero-name {
-    flex: 3 (1fr);
   }
 
   .hero-headline-wrapper {
@@ -2333,31 +2175,30 @@ a.play-icon:hover path {
   /* ------------------------------- */
 
   .footer-image {
-  max-width: 55rem;
-  min-width: 25rem;
-}
+    max-width: 55rem;
+    min-width: 45rem;
+  }
 
-.footer-logo-text {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  align-items: end;
-}
+  .footer-logo-text {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: end;
+  }
 
   .footer > :nth-child(1) {
-  order: 1;
-}
+    order: 1;
+  }
 
-.footer > :nth-child(2) {
-  order: 2;
-}
+  .footer > :nth-child(2) {
+    order: 2;
+  }
 
-.footer > :nth-child(3) {
-  order: 3;
-}
+  .footer > :nth-child(3) {
+    order: 3;
+  }
 
-
-  .grid-footer{
+  .grid-footer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
@@ -2373,12 +2214,12 @@ a.play-icon:hover path {
     text-align: right;
   }
 
-    .col-center {
+  .col-center {
     justify-self: center;
   }
-.error-content-wrapper {
-  height: 85vh;
-}
+  .error-content-wrapper {
+    height: 85vh;
+  }
   /* ------------------------------- */
   /* 📏 FULL-WIDTH BOTTOM SECTION */
   /* ------------------------------- */
@@ -2404,20 +2245,12 @@ a.play-icon:hover path {
 
 @media (min-width: 1200px) {
   /* TODO: Add styles here for X-large devices. */
-
-  .0grid {
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-  }
 }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
 
 @media (min-width: 1400px) {
   /* TODO: Add styles here for XX-large devices. */
-
-  .0grid {
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  }
 }
 
 /*
